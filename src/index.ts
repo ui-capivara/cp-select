@@ -6,7 +6,7 @@ import { SelectController } from './select/select.component';
 const Component = {
     template  : template,
     style     : style,
-    constants: ['debounce'],
+    constants: ['debounce', 'field'],
     functions: ['searchItems'],
     bindings: ['cpModel', 'items'],
     controller: SelectController

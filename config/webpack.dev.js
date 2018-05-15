@@ -22,8 +22,7 @@ module.exports = merge(webpackCommon, {
         new ExtractTextPlugin({
             filename: "cp-select.css",
             allChunks: true
-        }),
-        new UglifyJSPlugin()
+        })
     ],
     module: {
         rules: [

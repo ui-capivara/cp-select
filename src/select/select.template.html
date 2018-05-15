@@ -1,15 +1,15 @@
 <div class="cp-select-container">
-    <input type="text" 
-           cp-model="$ctrl.inputValue"
-           cp-focus="$ctrl.load($ctrl.inputValue)" 
-           cp-keyup="$ctrl.load($ctrl.inputValue, $ctrl.$constants.debounce)"/>
+    <input type="text" cp-model="$ctrl.inputValue" cp-focus="$ctrl.load($ctrl.inputValue, $ctrl.$constants.debounce, false)"
+        cp-keydown="$ctrl.onKeyDown($event)" cp-keyup="$ctrl.onKeyUp($event)" />
     <div class="cp-select-btns" cp-click="$ctrl.clear()">
-        <div class="close" cp-show="$ctrl.hasItemSelected()"></div>
-        <div class="arrow-down" cp-hide="$ctrl.hasItemSelected()"></div>
+        <div class="close" cp-show="$ctrl.hasItemSelected() && !$ctrl.loading"></div>
+        <div class="arrow-down" cp-hide="$ctrl.hasItemSelected() || $ctrl.loading"></div>
+        <div class="cp-select-loading" cp-show="$ctrl.loading"></div>
     </div>
     <ul cp-style="$ctrl.getStyleList()">
-        <li cp-repeat="$value in $ctrl.data" cp-click="$ctrl.select($value)">
+        <li cp-repeat="$value in $ctrl.data" cp-click="$ctrl.select($value)" cp-keydown="$ctrl.onKeyDown($event)">
             <cp-transclude></cp-transclude>
+            <span cp-if="$ctrl.hasTransclude()"> [[ $ctrl.getText($value) ]] </span>
         </li>
     </ul>
 </div>

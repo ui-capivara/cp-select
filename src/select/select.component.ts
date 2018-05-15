@@ -1,5 +1,6 @@
 import capivara from 'capivarajs';
 import { Coordinates } from '../helpers';
+import { FocusElement } from '../helpers/focus-element';
 
 export class SelectController {
     public $constants;
@@ -10,8 +11,31 @@ export class SelectController {
     private inputValue;
     private data: any;
     private timeLastSearch;
+    private loading;
 
     constructor(private $scope, private $element) {
+    }
+
+    onKeyDown(evt) {
+        if (evt.keyCode == 13) {
+            evt.preventDefault();
+            evt.stopPropagation();
+            const focusedOption = FocusElement.getOptionFocused(this.$element);
+            if (focusedOption) {
+                this.select(focusedOption['$scope'].scope.$value);
+            }
+        } else {
+            FocusElement.handling(this.$element, evt);
+        }
+    }
+
+    onKeyUp(evt) {
+        evt.preventDefault();
+        evt.stopPropagation();
+        if (evt.keyCode !== 13) {
+            this.$bindings.cpModel = null;
+            this.load(this.inputValue, this.$constants.debounce, true)
+        }
     }
 
     $onInit() {
@@ -21,7 +45,7 @@ export class SelectController {
     $onViewInit() {
         this.containerElement = this.$element.querySelector('.cp-select-container');
         if (this.$constants.debounce === undefined) {
-            this.$constants.debounce = 1000;
+            this.$constants.debounce = 500;
         }
     }
 
@@ -40,9 +64,11 @@ export class SelectController {
     }
 
     select($value) {
-        this.inputValue = $value['name'];
-        this.$bindings.cpModel = $value;
-        this.close();
+        if ($value && !capivara.equals($value, this.$bindings.cpModel)) {
+            this.inputValue = this.$constants.field ? $value[this.$constants.field] : $value;
+            this.$bindings.cpModel = $value;
+            this.close();
+        }
     }
 
     hasItemSelected() {
@@ -51,28 +77,33 @@ export class SelectController {
 
     open() {
         this.containerElement.querySelector('ul').style.display = 'flex';
+        this.disableScrolling();
     }
 
     close() {
         this.containerElement.querySelector('ul').style.display = 'none';
+        this.enableScrolling();
     }
 
     clear() {
         this.inputValue = '';
-        delete this.$bindings.cpModel;
-        this.load(this.inputValue, this.$constants.debounce);
+        this.$bindings.cpModel = null;
+        this.containerElement.querySelector('input').focus();
     }
 
-    load(param, debounce = 0) {
+    load(param, debounce = 0, clearModel?) {
         if (!param) param = '';
         if (this.timeLastSearch) {
             clearTimeout(this.timeLastSearch);
             delete this.timeLastSearch;
         }
         this.timeLastSearch = setTimeout(() => {
+            if (this.$bindings.cpModel) { return; };
+            this.loading = true;
             this.getDataAsync(param).then((resp) => {
                 this.data = resp;
                 this.open();
+                this.loading = false;
             });
         }, debounce);
     }
@@ -124,4 +155,20 @@ export class SelectController {
         document.ontouchmove = function (e) { return true; }
     }
 
+    $onChanges(changes) {
+        changes.forEach((change) => {
+            if (change.name == 'cpModel') {
+                this.select(change.object[change.name]);
+            }
+        });
+    }
+
+    getText($value) {
+        return this.$constants.field ? $value[this.$constants.field] : $value;
+    }
+
+    hasTransclude(){
+        return this.$element.querySelector('cp-transclude');
+    }
+    
 }
