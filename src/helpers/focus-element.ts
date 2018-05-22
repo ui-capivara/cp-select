@@ -1,3 +1,5 @@
+import capivara from 'capivarajs';
+
 export namespace FocusElement {
 
     const ITEMS_QUERY = 'ul li.binding-repeat';
@@ -41,7 +43,11 @@ export namespace FocusElement {
         const liFocused = getOptionFocused(element);
         if (liFocused) {
             let container = liFocused.parentNode;
-            container.scrollTop = liFocused.offsetTop - container.offsetTop + container.scrollTop;
+            Array.from(container.children).forEach((childNode, i) => {
+                if (capivara.equals(childNode, liFocused)) {
+                    container.scrollTop = (i * ( container.clientHeight / container.children.length ));
+                }
+            });
         }
     }
 

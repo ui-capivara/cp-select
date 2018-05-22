@@ -1,26 +1,21 @@
 export namespace Coordinates {
-    export function get(elem) {
-        var top = 0,
-            left = 0,
-            bottom = 0,
-            right = 0
-
-        var width = elem.offsetWidth;
-        var height = elem.offsetHeight;
-
-        while (elem) {
-            top += elem.offsetTop;
-            left += elem.offsetLeft;
-            elem = elem.offsetParent;
+    export function get(el) {
+        let xPos = 0, yPos = 0;
+        while (el) {
+            if (el.tagName == "BODY") {
+                let xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+                let yScroll = el.scrollTop || document.documentElement.scrollTop;
+                xPos += (el.offsetLeft - xScroll + el.clientLeft);
+                yPos += (el.offsetTop - yScroll + el.clientTop);
+            } else {
+                xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+                yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+            }
+            el = el.offsetParent;
         }
-
-        right = left + width;
-        bottom = top + height;
         return {
-            top: top,
-            left: left,
-            bottom: bottom,
-            right: right,
-        }
+            left: xPos,
+            top: yPos
+        };
     }
 }

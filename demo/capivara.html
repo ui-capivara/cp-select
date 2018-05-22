@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
     <title>Demo in CapivaraJS</title>
-    <link rel="stylesheet" href="../dist/cp-select.css" />
+    <link rel="stylesheet"
+          href="../dist/cp-select.css" />
     <style>
         body,
         html {
@@ -24,10 +27,14 @@
 
     <div style="width: 257px;">
 
-        <cp-select cp-model="venda.cliente" items="$ctrl.pessoas" debounce="1">
+        <cp-select cp-model="$ctrl.venda.cliente"
+                   items="$ctrl.pessoas"
+                   field="'name'"
+                   debounce="1">
             <cp-transclude>
                 <span>[[ $value.name ]]</span>
-                <img cp-src="'https://api.adorable.io/avatars/285/' + $value.name + '.png'" width="30" />
+                <img cp-attr.src="'https://api.adorable.io/avatars/285/' + $value.name + '.png'"
+                     width="30" />
             </cp-transclude>
         </cp-select>
 
@@ -38,6 +45,9 @@
     <script>
         class MyController {
             constructor() {
+                this.venda = {
+                    cliente: { name: "Caio" }
+                }
                 this.pessoas = [
                     { name: "Mateus" },
                     { name: "Caio" },

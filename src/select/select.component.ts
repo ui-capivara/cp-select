@@ -1,6 +1,7 @@
 import capivara from 'capivarajs';
 import { Coordinates } from '../helpers';
 import { FocusElement } from '../helpers/focus-element';
+import { Cookie } from '../helpers/cookie';
 
 export class SelectController {
     public $constants;
@@ -11,7 +12,11 @@ export class SelectController {
     private inputValue;
     private data: any;
     private timeLastSearch;
+    private timeCloseList;
     private loading;
+    private hasFocus;
+    private positionList;
+    private FAVORITE_KEY;
 
     constructor(private $scope, private $element) {
     }
@@ -32,20 +37,37 @@ export class SelectController {
     onKeyUp(evt) {
         evt.preventDefault();
         evt.stopPropagation();
-        if (evt.keyCode !== 13) {
+        if (evt.keyCode !== 13 && evt.keyCode !== 40 && evt.keyCode !== 38) {
             this.$bindings.cpModel = null;
             this.load(this.inputValue, this.$constants.debounce, true)
         }
     }
 
     $onInit() {
+        this.setFavoriteKey();
         this.closeWhenClickAway();
+        this.$scope.element(window).on('scroll', () => {
+            if (this.hasFocus) {
+                this.setStyleList();
+            }
+        });
     }
 
     $onViewInit() {
         this.containerElement = this.$element.querySelector('.cp-select-container');
         if (this.$constants.debounce === undefined) {
             this.$constants.debounce = 500;
+        }
+        if (this.$constants.favorite) {
+            const favoriteValue = Cookie.get(this.FAVORITE_KEY);
+            if (favoriteValue) { this.select(favoriteValue) }
+        }
+        if (this.$bindings.cpModel) {
+            if (Object.keys(this.$bindings.cpModel).length > 0) {
+                this.inputValue = this.$constants.field ? this.$bindings.cpModel[this.$constants.field] : this.$bindings.cpModel;
+            } else {
+                this.$bindings.cpModel = null;
+            }
         }
     }
 
@@ -68,6 +90,7 @@ export class SelectController {
             this.inputValue = this.$constants.field ? $value[this.$constants.field] : $value;
             this.$bindings.cpModel = $value;
             this.close();
+            this.$element.querySelector('.cp-select-container input').focus();
         }
     }
 
@@ -76,19 +99,31 @@ export class SelectController {
     }
 
     open() {
-        this.containerElement.querySelector('ul').style.display = 'flex';
-        this.disableScrolling();
+        this.setStyleList();
+        this.containerElement.querySelector('ul').style.display = 'block';
     }
 
     close() {
         this.containerElement.querySelector('ul').style.display = 'none';
-        this.enableScrolling();
     }
 
     clear() {
         this.inputValue = '';
         this.$bindings.cpModel = null;
         this.containerElement.querySelector('input').focus();
+    }
+
+    onFocusInput() {
+        if (this.hasFocus) {
+            return;
+        }
+        this.hasFocus = true;
+        this.load(this.inputValue, this.$constants.debounce, false);
+    }
+
+    onBlurInput() {
+        this.hasFocus = false;
+        this.timeCloseList = setTimeout(() => this.close(), 500);
     }
 
     load(param, debounce = 0, clearModel?) {
@@ -102,7 +137,13 @@ export class SelectController {
             this.loading = true;
             this.getDataAsync(param).then((resp) => {
                 this.data = resp;
-                this.open();
+                if (this.hasFocus) {
+                    this.open();
+                    setTimeout(() => {
+                        FocusElement.removeAllFocus(this.$element);
+                        FocusElement.setFocusedFirstElement(this.$element);
+                    }, 100);
+                }
                 this.loading = false;
             });
         }, debounce);
@@ -110,30 +151,28 @@ export class SelectController {
 
     getDataAsync(param = '') {
         return new Promise((resolve, reject) => {
-            if (this.$functions.searchItems) {
-                const searchItemsResponse = this.$functions.searchItems(param);
-                if (Array.isArray(searchItemsResponse)) {
-                    resolve(searchItemsResponse);
-                } else {
-                    searchItemsResponse.then((resp) => {
-                        resolve(resp.data);
-                    });
-                }
-            } else if (this.$bindings.items) {
-                const data = Array.isArray(this.$bindings.items) ? this.$bindings.items : this.$bindings.items();
-                resolve((data || []).filter((obj) => {
+            const data = Array.isArray(this.$bindings.items) ? this.$bindings.items : this.$bindings.items(param);
+            const filterData = (arr) => {
+                return arr.filter((obj) => {
                     return Object.keys(obj).filter((key) => {
                         if (typeof obj[key] == 'string') {
                             return obj[key].toLowerCase().indexOf(param.toLowerCase()) != -1
                         }
                         return false;
                     }).length > 0;
-                }));
+                });
+            }
+            if (typeof data.then === 'function') {
+                data.then((itemsResponse) => {
+                    resolve(filterData(itemsResponse.data));
+                });
+            } else {
+                resolve(filterData(data));
             }
         });
     }
 
-    getStyleList() {
+    setStyleList() {
         const position = Coordinates.get(this.containerElement);
         const obj = {
             'position': 'fixed',
@@ -141,18 +180,7 @@ export class SelectController {
             'left': position.left + 'px',
             'top': position.top + this.containerElement.clientHeight + 'px',
         };
-        return obj;
-    }
-
-    disableScrolling() {
-        const x = window.scrollX, y = window.scrollY;
-        window.onscroll = function () { window.scrollTo(x, y); };
-        document.ontouchmove = function (e) { e.preventDefault(); }
-    }
-
-    enableScrolling() {
-        window.onscroll = function () { };
-        document.ontouchmove = function (e) { return true; }
+        this.positionList = obj;
     }
 
     $onChanges(changes) {
@@ -167,8 +195,35 @@ export class SelectController {
         return this.$constants.field ? $value[this.$constants.field] : $value;
     }
 
-    hasTransclude(){
+    hasTransclude() {
         return this.$element.querySelector('cp-transclude');
     }
-    
+
+    setFavoriteKey() {
+        this.FAVORITE_KEY = btoa(this.$element.outerHTML)
+            .replace(/\+|\&|\?|[0-9]|\=|\-/g, '')
+            .split('')
+            .filter((item, pos, self) => self.indexOf(item) == pos)
+            .join('');
+    }
+
+    favorite(evt, $value) {
+        if (this.timeCloseList) {
+            clearTimeout(this.timeCloseList);
+        }
+        evt.preventDefault();
+        evt.stopPropagation();
+        if (this.isFavorite($value)) {
+            Cookie.erase(this.FAVORITE_KEY);
+        } else {
+            Cookie.set(this.FAVORITE_KEY, $value);
+        }
+        this.hasFocus = true;
+        this.containerElement.querySelector('input').focus();
+    }
+
+    isFavorite($value) {
+        return Cookie.isFavorite(this.FAVORITE_KEY, $value);
+    }
+
 }

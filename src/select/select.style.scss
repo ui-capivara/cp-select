@@ -1,4 +1,9 @@
 cp-select{
+    * {
+        font-family: "Roboto", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+    }
     ::-webkit-scrollbar-track
     {
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -50,6 +55,9 @@ cp-select{
             border: none;
             outline: none;
         }
+        input ~ label{
+            display: none;
+        }
         ul {
             display: none;
             flex-direction: column;
@@ -62,7 +70,7 @@ cp-select{
             overflow: auto;
             li{
                 max-width: 100%;
-                min-height: 34px;
+                min-height: 48px;
                 display: flex;
                 align-items: center;
                 padding: 5px 14px;
@@ -76,6 +84,15 @@ cp-select{
                 }
                 img{
                     margin-right: 10px;
+                }
+                .cp-option-content{
+                    flex: 1;
+                }
+                .cp-favorite-content{
+                    width: 30px;
+                    svg {
+                        width: 18px;
+                    }
                 }
             }
         }
@@ -119,8 +136,8 @@ cp-select{
     }    
     .cp-select-loading {
         display: inline-block;
-        width: 10px;
-        height: 10px;
+        width: 14px;
+        height: 14px;
         border: 2px solid #333;
         border-radius: 100%;
         border-top: 2px solid transparent;
@@ -156,6 +173,50 @@ cp-select{
         100% {
           -webkit-transform: rotate(360deg);
                   transform: rotate(360deg);
+        }
+    }
+    &.md{
+        .cp-select-container{
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            border-radius: 0;
+            input{
+                background: transparent;
+                padding: 0;
+                height: 34px;
+                font-size: 14px;
+                line-height: 1.42857143;
+            }
+            input ~ label{
+                display: block;
+                position: absolute;
+                letter-spacing: 2px;
+                font-size: 15px;
+                pointer-events: none;
+                left: 0;
+                top: 7px;
+                transition: 0.2s ease all;
+                color: #999;
+                font-weight: 400;
+                font-family: "Roboto", sans-serif;
+            }
+            input:focus ~ label, input.focused ~ label, input[reflect-value]:not([reflect-value=""]) ~ label {
+                top: -12px;
+                transform: translate3d(0, 0px, 0) scale(0.8);
+                transform-origin: left top;
+                font-size: 1.6rem;
+            }
+            ul {
+                box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12);
+                transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+                border-radius: 2px;
+                border: none;
+            }
+            .cp-select-btns{
+                margin-right: 5px;
+            }
         }
     }
 }
