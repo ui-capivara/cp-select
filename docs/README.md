@@ -9,10 +9,10 @@ O cp-select é um componente para de seleção, ele permite o usuário buscar da
 Recomendamos vincular a um número de versão específico que você possa atualizar manualmente, porém no exemplo iremos utilizar a ultima versão disponível.
 ```html
 <!-- Stylesheet -->
-<link rel="stylesheet" href="https://unpkg.com/cp-select@latest/dist/cp-select.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@uicapivara/cp-select@latest/dist/cp-select.min.css">
 
 <!-- Component -->
-<script src="https://unpkg.com/cp-select@latest/dist/cp-select.min.js"></script>
+<script src="https://unpkg.com/@uicapivara/cp-select@latest/dist/cp-select.min.js"></script>
 ```
 Certifique-se de ler sobre as diferentes construções e use a produção, substituindo os arquivos .js por .min.js. Esta é uma compilação otimizada para velocidade em vez de experiência de desenvolvimento.
 
@@ -20,7 +20,7 @@ Certifique-se de ler sobre as diferentes construções e use a produção, subst
 O NPM é o método de instalação recomendado ao criar aplicativos de grande escala. Ele combina muito bem com bundlers de módulo, como Webpack ou Browserify.
 
 ```shell
-$ npm install cp-select --save
+$ npm install @uicapivara/cp-select --save
 ```
 Após a instalação, precisamos importar o componente no projeto.
 
