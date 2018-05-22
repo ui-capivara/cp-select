@@ -26,11 +26,11 @@ Após a instalação, precisamos importar o componente no projeto.
 
 Se seu projeto utiliza **typescript** você pode importar o componente normalmente.
 ```javascript
-import 'cp-select';
+import '@uicapivara/cp-select';
 ```
 Caso contrário é necessário importa-los especificando o arquivo **js**. Exemplo:
 ```javascript
-import 'cp-select/index.js';
+import '@uicapivara/cp-select/index.js';
 ```
 
 # Como usar
@@ -59,3 +59,42 @@ class MyController {
 
 capivara.controller(document.body, MyController);
 ```
+
+Disponibilizamos alguns exemplos em diferentes ambientes, afim de demonstrar sua funcionalidade.
+
+CapivaraJS - [Jsfiddle](https://jsfiddle.net/t0b8xxfj/12).
+
+Angular.js - [Jsfiddle](https://jsfiddle.net/t0b8xxfj/14).
+
+Angular - [Jsfiddle](https://jsfiddle.net/1hk7knwq/3601/).
+
+Vue.js - [Jsfiddle](http://jsfiddle.net/td4v7qqd/75/).
+
+React - [Jsfiddle](http://jsfiddle.net/td4v7qqd/76/).
+
+# Favoritos
+Você pode ativar a funcionalidade de favoritos. Essa funcionalidade faz com que o componente salve um registro padrão, para que quando o usuário entrar na tela, não ter a necessidade de selecionar sempre o mesmo registro.
+
+Para ativar essa função basta colocar o atributo **favorite** como verdadeiro. Exemplo: 
+```html
+<cp-select cp-model="$ctrl.pessoa" 
+           items="$ctrl.lista" 
+           field="'name'" 
+           favorite="true">
+</cp-select>
+```
+Veja esse exemplo no [Jsfiddle](https://jsfiddle.net/t0b8xxfj/16/).
+
+# Transclude
+Também é permitido customizar o template das opções, isso acontece quando precisamos colocar mais informações dentro do html. Para isso utilizamos a funcionalidade de **transclude** do capivarajs.
+
+Você precisa passar seu template dentro da tag **cp-transclude** para podermos disponibilizar uma variável **$value** com o item da sua lista.
+```html
+<cp-select cp-model="$ctrl.pessoa" items="$ctrl.lista" field="'name'" >
+    <cp-transclude>
+        <span>[[ $value.name ]]</span>
+        <img cp-attr.src="$value.picture" width="30"/>
+    </cp-transclude>
+</cp-select>
+```
+Veja esse exemplo no [Jsfiddle](https://jsfiddle.net/t0b8xxfj/18/).
