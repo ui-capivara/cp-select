@@ -123,7 +123,7 @@ class MyController {
     constructor() { }
 
     onItemSelect(item) {
-        console.log('Selecionou: ', item);
+        console.log('Selecionou o item: ', item);
     }
 }
 
