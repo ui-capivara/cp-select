@@ -30,6 +30,7 @@
         <cp-select cp-model="$ctrl.venda.cliente"
                    items="$ctrl.pessoas"
                    field="'name'"
+                   on-select="$ctrl.afterSelect"
                    debounce="1">
             <cp-transclude>
                 <span>[[ $value.name ]]</span>
@@ -54,6 +55,9 @@
                     { name: "Felipe" },
                     { name: "Douglas" },
                 ]
+            }
+            afterSelect(value) {
+                console.log('Selecionou: ', value);
             }
         }
         capivara.controller(document.body, MyController);

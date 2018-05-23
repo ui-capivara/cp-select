@@ -22016,7 +22016,7 @@ var Component = {
     template: _select_select_template_html__WEBPACK_IMPORTED_MODULE_1___default.a,
     style: _select_select_style_scss__WEBPACK_IMPORTED_MODULE_2___default.a,
     constants: ['debounce', 'field', 'placeholder', 'favorite'],
-    functions: [],
+    functions: ['onSelect', 'onRemove'],
     bindings: ['cpModel', 'items'],
     controller: _select_select_component__WEBPACK_IMPORTED_MODULE_3__["SelectController"]
 };
@@ -22081,14 +22081,17 @@ var SelectController = /** @class */ (function () {
         });
     };
     SelectController.prototype.$onViewInit = function () {
+        var _this = this;
         this.containerElement = this.$element.querySelector('.cp-select-container');
         if (this.$constants.debounce === undefined) {
             this.$constants.debounce = 500;
         }
         if (this.$constants.favorite) {
-            var favoriteValue = _helpers_cookie__WEBPACK_IMPORTED_MODULE_3__["Cookie"].get(this.FAVORITE_KEY);
-            if (favoriteValue) {
-                this.select(favoriteValue);
+            var favoriteValue_1 = _helpers_cookie__WEBPACK_IMPORTED_MODULE_3__["Cookie"].get(this.FAVORITE_KEY);
+            if (favoriteValue_1) {
+                setTimeout(function () {
+                    _this.select(favoriteValue_1);
+                });
             }
         }
         if (this.$bindings.cpModel) {
@@ -22111,8 +22114,12 @@ var SelectController = /** @class */ (function () {
                 }
                 elm = elm.parentNode;
             }
-            if (!clickedTheComponent)
+            if (!clickedTheComponent) {
+                if (_this.timeCloseList) {
+                    clearTimeout(_this.timeCloseList);
+                }
                 _this.close();
+            }
         });
     };
     SelectController.prototype.select = function ($value) {
@@ -22121,6 +22128,8 @@ var SelectController = /** @class */ (function () {
             this.$bindings.cpModel = $value;
             this.close();
             this.$element.querySelector('.cp-select-container input').focus();
+            if (this.$functions.onSelect)
+                this.$functions.onSelect($value);
         }
     };
     SelectController.prototype.hasItemSelected = function () {
@@ -22134,8 +22143,16 @@ var SelectController = /** @class */ (function () {
         this.containerElement.querySelector('ul').style.display = 'none';
     };
     SelectController.prototype.clear = function () {
+        if (this.$bindings.cpModel) {
+            if (this.$functions.onRemove) {
+                this.$functions.onRemove(this.$bindings.cpModel);
+            }
+        }
         this.inputValue = '';
         this.$bindings.cpModel = null;
+        if (this.timeCloseList) {
+            clearTimeout(this.timeCloseList);
+        }
         this.containerElement.querySelector('input').focus();
     };
     SelectController.prototype.onFocusInput = function () {
@@ -22148,7 +22165,9 @@ var SelectController = /** @class */ (function () {
     SelectController.prototype.onBlurInput = function () {
         var _this = this;
         this.hasFocus = false;
-        this.timeCloseList = setTimeout(function () { return _this.close(); }, 500);
+        this.timeCloseList = setTimeout(function () {
+            _this.close();
+        }, 500);
     };
     SelectController.prototype.load = function (param, debounce, clearModel) {
         var _this = this;

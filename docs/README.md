@@ -62,7 +62,7 @@ capivara.controller(document.body, MyController);
 
 Disponibilizamos alguns exemplos em diferentes ambientes, afim de demonstrar sua funcionalidade.
 
-CapivaraJS - [Jsfiddle](https://jsfiddle.net/t0b8xxfj/12).
+CapivaraJS - [Jsfiddle](https://jsfiddle.net/t0b8xxfj/27/).
 
 Angular.js - [Jsfiddle](https://jsfiddle.net/t0b8xxfj/14).
 
@@ -83,7 +83,7 @@ Para ativar essa função basta colocar o atributo **favorite** como verdadeiro.
            favorite="true">
 </cp-select>
 ```
-Veja esse exemplo no [Jsfiddle](https://jsfiddle.net/t0b8xxfj/16/).
+Veja esse exemplo no [Jsfiddle](https://jsfiddle.net/t0b8xxfj/26/).
 
 # Transclude
 Também é permitido customizar o template das opções, isso acontece quando precisamos colocar mais informações dentro do html. Para isso utilizamos a funcionalidade de **transclude** do capivarajs.
@@ -97,4 +97,58 @@ Você precisa passar seu template dentro da tag **cp-transclude** para podermos 
     </cp-transclude>
 </cp-select>
 ```
-Veja esse exemplo no [Jsfiddle](https://jsfiddle.net/t0b8xxfj/18/).
+Veja esse exemplo no [Jsfiddle](https://jsfiddle.net/t0b8xxfj/25/).
+
+# Async
+Afim de demostrar que o componente aceita dados assíncronos, criamos um exemplo **Angular.js** demonstrando que você pode criar uma função que retorna uma **Promisse**. 
+
+Quando é informado uma função no atributo **items**, o componente passa para a função o texto que o usuário informou, para que seja possível você filtrar os dados por uma API. 
+
+Veja esse exemplo no [Jsfiddle](https://jsfiddle.net/t0b8xxfj/20/).
+
+# Eventos
+O componente permite que você escute alguns eventos, isso te permite realizar ações em determinados momentos.
+
+## onSelect
+Evento executado quando o usuário seleciona um registro, essa função recebe o item que foi selecionado. Exemplo: 
+```html
+<cp-select cp-model="$ctrl.pessoa" 
+           items="$ctrl.lista" 
+           field="'name'" 
+           on-select="$ctrl.onItemSelect">
+</cp-select>
+```
+```javascript
+class MyController {
+    constructor() { }
+
+    onItemSelect(item) {
+        console.log('Selecionou: ', item);
+    }
+}
+
+capivara.controller(document.body, MyController);
+```
+Veja esse exemplo no [Jsfiddle](https://jsfiddle.net/t0b8xxfj/24/).
+
+## onRemove
+Evento executado quando o usuário desfaz a seleção de um item. Exemplo: 
+```html
+<cp-select cp-model="$ctrl.pessoa" 
+           items="$ctrl.lista" 
+           field="'name'" 
+           on-remove="$ctrl.onItemRemove">
+</cp-select>
+```
+```javascript
+class MyController {
+    constructor() { }
+
+    onItemRemove() {
+        console.log('Função executada.');
+    }
+}
+
+capivara.controller(document.body, MyController);
+```
+Veja esse exemplo no [Jsfiddle](https://jsfiddle.net/t0b8xxfj/23/).

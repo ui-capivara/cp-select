@@ -60,7 +60,11 @@ export class SelectController {
         }
         if (this.$constants.favorite) {
             const favoriteValue = Cookie.get(this.FAVORITE_KEY);
-            if (favoriteValue) { this.select(favoriteValue) }
+            if (favoriteValue) {
+                setTimeout(() => {
+                    this.select(favoriteValue);
+                });
+            }
         }
         if (this.$bindings.cpModel) {
             if (Object.keys(this.$bindings.cpModel).length > 0) {
@@ -81,7 +85,10 @@ export class SelectController {
                 }
                 elm = elm.parentNode;
             }
-            if (!clickedTheComponent) this.close();
+            if (!clickedTheComponent) {
+                if (this.timeCloseList) { clearTimeout(this.timeCloseList) }
+                this.close();
+            }
         });
     }
 
@@ -91,6 +98,7 @@ export class SelectController {
             this.$bindings.cpModel = $value;
             this.close();
             this.$element.querySelector('.cp-select-container input').focus();
+            if (this.$functions.onSelect) this.$functions.onSelect($value);
         }
     }
 
@@ -108,8 +116,14 @@ export class SelectController {
     }
 
     clear() {
+        if (this.$bindings.cpModel) {
+            if (this.$functions.onRemove) {
+                this.$functions.onRemove(this.$bindings.cpModel);
+            }
+        }
         this.inputValue = '';
         this.$bindings.cpModel = null;
+        if (this.timeCloseList) { clearTimeout(this.timeCloseList) }
         this.containerElement.querySelector('input').focus();
     }
 
@@ -123,7 +137,9 @@ export class SelectController {
 
     onBlurInput() {
         this.hasFocus = false;
-        this.timeCloseList = setTimeout(() => this.close(), 500);
+        this.timeCloseList = setTimeout(() => {
+            this.close();
+        }, 500);
     }
 
     load(param, debounce = 0, clearModel?) {

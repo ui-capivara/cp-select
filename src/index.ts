@@ -7,7 +7,7 @@ const Component = {
     template: template,
     style: style,
     constants: ['debounce', 'field', 'placeholder', 'favorite'],
-    functions: [],
+    functions: ['onSelect', 'onRemove'],
     bindings: ['cpModel', 'items'],
     controller: SelectController
 };
