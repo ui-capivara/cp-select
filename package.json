@@ -1,8 +1,8 @@
 {
   "name": "@uicapivara/cp-select",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "cp-select",
-  "private" : false,
+  "private": false,
   "main": "src/index.ts",
   "scripts": {
     "dev": "webpack-dev-server --config ./config/webpack.dev.js",
@@ -51,6 +51,6 @@
   "author": "CapivaraJS Team",
   "license": "LGPL-3.0",
   "dependencies": {
-    "capivarajs": "^3.3.2"
+    "capivarajs": "^3.3.4"
   }
 }

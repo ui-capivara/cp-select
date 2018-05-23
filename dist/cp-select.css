@@ -50,6 +50,7 @@ cp-select .cp-select-container {
   cp-select .cp-select-container input ~ label {
     display: none; }
   cp-select .cp-select-container ul {
+    z-index: 99999999999;
     display: none;
     flex-direction: column;
     border: 1px solid #ccc;

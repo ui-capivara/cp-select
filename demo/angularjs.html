@@ -33,31 +33,22 @@
     <br>
     <br>
 
-    <div class="col-md-5 col-md-offset-3">
-        <div class="panel gmd">
-            <div class="panel-heading">
-                Resultado - {{ venda.cliente.name }}
-            </div>
-            <div class="panel-body">
-
-                <cp-select class="md"
-                           cp-model="venda.cliente"
-                           placeholder="'Funcionário'"
-                           items="getItens"
-                           field="'name'"
-                           favorite="true"></cp-select>
-
-
-            </div>
-        </div>
-    </div>
+    <div ui-view></div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
-    <script src="../dist/cp-select.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.18/angular-ui-router.min.js"></script>
+    
     <script>
-        angular.module('app', []).controller('ctrl', function ($scope, $http) {
+        angular.module('app', ['ui.router'])
+        .config(function($urlRouterProvider, $stateProvider){
+            $stateProvider
+            .state('state1', {
+                url: "/state1",
+                templateUrl: "state1.html"
+            })
+        })
+        .controller('ctrl', function ($scope, $http, $state) {
 
             $scope.pessoas = [{ name: 'Mateus' }, { name: 'Felipe' }, { name: 'Caio' }, { name: 'Douglas' }];
 
@@ -65,9 +56,14 @@
                 return $http.get('https://jsonplaceholder.typicode.com/users?q=' + param);
             }
 
+            setTimeout(() => {
+                $state.go('state1');
+            }, 3000);
+
         });
     </script>
 
+    <script async src="../dist/cp-select.js"></script>
 </body>
 
 </html>
