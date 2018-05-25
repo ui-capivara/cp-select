@@ -45,11 +45,21 @@
             $stateProvider
             .state('state1', {
                 url: "/state1",
-                templateUrl: "state1.html"
+                templateUrl: "state1.html",
+                controller: function($scope, $timeout) {
+                    $scope.felipe = $scope.$parent.cliente
+                    
+                }
             })
         })
-        .controller('ctrl', function ($scope, $http, $state) {
+        .controller('ctrl', function ($scope, $http, $state,$timeout) {
 
+            $scope.cliente = { name: 'Mateus' }
+
+            $timeout(() => {
+                $scope.cliente = { name: 'Miranda' }
+            }, 3000)
+           
             $scope.pessoas = [{ name: 'Mateus' }, { name: 'Felipe' }, { name: 'Caio' }, { name: 'Douglas' }];
 
             $scope.getItens = function (param) {

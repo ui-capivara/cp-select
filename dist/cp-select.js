@@ -21978,14 +21978,22 @@ var SelectController = /** @class */ (function () {
         }
     };
     SelectController.prototype.$onInit = function () {
-        var _this = this;
         this.setFavoriteKey();
         this.closeWhenClickAway();
-        this.$scope.element(window).on('scroll', function () {
-            if (_this.hasFocus) {
-                _this.setStyleList();
-            }
-        });
+        // this.$scope.element(window).on('scroll', () => {
+        //     if (this.hasFocus) {
+        //         this.setStyleList();
+        //     }
+        // });
+    };
+    SelectController.prototype.disableScrolling = function () {
+        var x = window.scrollX, y = window.scrollY;
+        window.onscroll = function () { window.scrollTo(x, y); };
+        document.ontouchmove = function (e) { e.preventDefault(); };
+    };
+    SelectController.prototype.enableScrolling = function () {
+        window.onscroll = function () { };
+        document.ontouchmove = function (e) { return true; };
     };
     SelectController.prototype.$onViewInit = function () {
         var _this = this;
@@ -22045,9 +22053,11 @@ var SelectController = /** @class */ (function () {
     SelectController.prototype.open = function () {
         this.setStyleList();
         this.containerElement.querySelector('ul').style.display = 'block';
+        this.disableScrolling();
     };
     SelectController.prototype.close = function () {
         this.containerElement.querySelector('ul').style.display = 'none';
+        this.enableScrolling();
     };
     SelectController.prototype.clear = function () {
         if (this.$bindings.cpModel) {

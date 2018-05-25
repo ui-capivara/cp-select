@@ -9,13 +9,14 @@ export class SelectController {
     public $bindings;
 
     private containerElement;
-    private inputValue;
-    private data: any;
+    private inputValue = '';
+    private loading = false;
+    private hasFocus = false;
+    private positionList = {};
+
+    private data;
     private timeLastSearch;
     private timeCloseList;
-    private loading;
-    private hasFocus;
-    private positionList;
     private FAVORITE_KEY;
 
     constructor(private $scope, private $element) {
@@ -46,11 +47,22 @@ export class SelectController {
     $onInit() {
         this.setFavoriteKey();
         this.closeWhenClickAway();
-        this.$scope.element(window).on('scroll', () => {
+        this.$scope.element(document).on('scroll', () => {
             if (this.hasFocus) {
                 this.setStyleList();
             }
         });
+    }
+
+    disableScrolling() {
+        const x = window.scrollX, y = window.scrollY;
+        window.onscroll = function () { window.scrollTo(x, y); };
+        document.ontouchmove = function (e) { e.preventDefault(); }
+    }
+
+    enableScrolling() {
+        window.onscroll = function () { };
+        document.ontouchmove = function (e) { return true; }
     }
 
     $onViewInit() {
@@ -73,6 +85,7 @@ export class SelectController {
                 this.$bindings.cpModel = null;
             }
         }
+        this.$scope.$watch('$ctrl.$bindings.cpModel', (newValue) => this.select(newValue, true));
     }
 
     closeWhenClickAway() {
@@ -92,8 +105,8 @@ export class SelectController {
         });
     }
 
-    select($value) {
-        if ($value && !capivara.equals($value, this.$bindings.cpModel)) {
+    select($value, forceUpdate?) {
+        if (($value && !capivara.equals($value, this.$bindings.cpModel)) || ($value && forceUpdate)) {
             this.inputValue = this.$constants.field ? $value[this.$constants.field] : $value;
             this.$bindings.cpModel = $value;
             this.close();
@@ -109,10 +122,12 @@ export class SelectController {
     open() {
         this.setStyleList();
         this.containerElement.querySelector('ul').style.display = 'block';
+        // this.disableScrolling();
     }
 
     close() {
         this.containerElement.querySelector('ul').style.display = 'none';
+        // this.enableScrolling();
     }
 
     clear() {
@@ -197,14 +212,6 @@ export class SelectController {
             'top': position.top + this.containerElement.clientHeight + 'px',
         };
         this.positionList = obj;
-    }
-
-    $onChanges(changes) {
-        changes.forEach((change) => {
-            if (change.name == 'cpModel') {
-                this.select(change.object[change.name]);
-            }
-        });
     }
 
     getText($value) {
