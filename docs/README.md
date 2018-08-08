@@ -100,11 +100,13 @@ Você precisa passar seu template dentro da tag **cp-transclude** para podermos 
 Veja esse exemplo no [Jsfiddle](https://jsfiddle.net/t0b8xxfj/25/).
 
 # Async
-Afim de demostrar que o componente aceita dados assíncronos, criamos um exemplo **Angular.js** demonstrando que você pode criar uma função que retorna uma **Promisse**. 
+O componente aceita dados assíncronos, bastando que você faça o bind do model com uma função que retorna uma **Promisse**. 
 
 Quando é informado uma função no atributo **items**, o componente passa para a função o texto que o usuário informou, para que seja possível você filtrar os dados por uma API. 
 
-Veja esse exemplo no [Jsfiddle](https://jsfiddle.net/t0b8xxfj/20/).
+Exemplos: 
+    [Angular.js](https://jsfiddle.net/t0b8xxfj/20/);
+    [Vue.JS](http://jsfiddle.net/L9kjemvc/).
 
 # Eventos
 O componente permite que você escute alguns eventos, isso te permite realizar ações em determinados momentos.
