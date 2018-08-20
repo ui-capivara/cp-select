@@ -49,6 +49,11 @@
                 this.venda = {
                     cliente: { name: "Caio" }
                 }
+
+                setTimeout(() => {
+                  this.venda.cliente.name = 'Mateus';
+                }, 5000);
+
                 this.pessoas = [
                     { name: "Mateus" },
                     { name: "Caio" },

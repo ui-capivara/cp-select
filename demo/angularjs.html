@@ -38,7 +38,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.18/angular-ui-router.min.js"></script>
-    
+
     <script>
         angular.module('app', ['ui.router'])
         .config(function($urlRouterProvider, $stateProvider){
@@ -47,8 +47,7 @@
                 url: "/state1",
                 templateUrl: "state1.html",
                 controller: function($scope, $timeout) {
-                    $scope.felipe = $scope.$parent.cliente
-                    
+                    $scope.felipe = $scope.$parent.cliente;
                 }
             })
         })
@@ -59,7 +58,7 @@
             $timeout(() => {
                 $scope.cliente = { name: 'Miranda' }
             }, 3000)
-           
+
             $scope.pessoas = [{ name: 'Mateus' }, { name: 'Felipe' }, { name: 'Caio' }, { name: 'Douglas' }];
 
             $scope.getItens = function (param) {

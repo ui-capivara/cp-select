@@ -1,19 +1,24 @@
 <div class="col-md-5 col-md-offset-3">
-    <div class="panel gmd">
-        <div class="panel-heading">
-            Resultado - {{ $parent.cliente }}
-        </div>
-        <div class="panel-body">
-            
-            <cp-select class="md"
-                        ng-click="teste()"
-                        cp-model="$parent.cliente"
-                        placeholder="'Funcionário'"
-                        items="getItens"
-                        field="'name'"
-                        favorite="true"></cp-select>
-
-
-        </div>
+  <div class="panel gmd">
+    <div class="panel-heading">
+      Resultado - {{ $parent.cliente }}
     </div>
+    <div class="panel-body">
+
+      <cp-select cp-model="$parent.cliente"
+                 items="getItens"
+                 field="'name'"
+                 on-select="$ctrl.afterSelect"
+                 favorite="true"
+                 debounce="1">
+        <cp-transclude>
+          <span>[[ $value.name ]]</span>
+          <img cp-attr.src="'https://api.adorable.io/avatars/285/' + $value.name + '.png'"
+               width="30" />
+        </cp-transclude>
+      </cp-select>
+
+
+    </div>
+  </div>
 </div>
