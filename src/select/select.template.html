@@ -8,7 +8,7 @@
            cp-class="{ 'focused' : $ctrl.hasFocus }"
            cp-keyup="$ctrl.onKeyUp($event)" />
     <label class="form-label cp-address-label"
-           cp-if="$ctrl.$constants.placeholder"
+           cp-show="$ctrl.$constants.placeholder"
            cp-class="{ 'active' : $ctrl.address.information }">
         [[ $ctrl.$constants.placeholder ]]
     </label>
@@ -26,7 +26,7 @@
             cp-click="$ctrl.select($value)">
             <div class="cp-option-content">
                 <cp-transclude></cp-transclude>
-                <span cp-if="$ctrl.hasTransclude()"> [[ $ctrl.getText($value) ]] </span>
+                <span cp-show="$ctrl.hasTransclude()"> [[ $ctrl.getText($value) ]] </span>
             </div>
             <div class="cp-favorite-content"
                  cp-show="$ctrl.$constants.favorite">

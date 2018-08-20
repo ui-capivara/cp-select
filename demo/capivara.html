@@ -32,11 +32,6 @@
                    field="'name'"
                    on-select="$ctrl.afterSelect"
                    debounce="1">
-            <cp-transclude>
-                <span>[[ $value.name ]]</span>
-                <img cp-attr.src="'https://api.adorable.io/avatars/285/' + $value.name + '.png'"
-                     width="30" />
-            </cp-transclude>
         </cp-select>
 
     </div>
@@ -49,10 +44,6 @@
                 this.venda = {
                     cliente: { name: "Caio" }
                 }
-
-                setTimeout(() => {
-                  this.venda.cliente.name = 'Mateus';
-                }, 5000);
 
                 this.pessoas = [
                     { name: "Mateus" },

@@ -71,10 +71,105 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../../../capivarajs/node_modules/lodash/lodash.js":
-/*!**************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/node_modules/lodash/lodash.js ***!
-  \**************************************************************************/
+/***/ "../node_modules/capivarajs/dist/capivara.js":
+/*!***************************************************!*\
+  !*** ../node_modules/capivarajs/dist/capivara.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/dist/";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "../src/index.ts");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "../node_modules/lodash/lodash.js":
+/*!****************************************!*\
+  !*** ../node_modules/lodash/lodash.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17176,14 +17271,14 @@
   else {}
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../components/cp-select/node_modules/webpack/buildin/global.js */ "../node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../../components/cp-select/node_modules/webpack/buildin/module.js */ "../node_modules/webpack/buildin/module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "../node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../webpack/buildin/module.js */ "../node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
 
-/***/ "../../../capivarajs/node_modules/melanke-watchjs/src/watch.js":
-/*!**************************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/node_modules/melanke-watchjs/src/watch.js ***!
-  \**************************************************************************************/
+/***/ "../node_modules/melanke-watchjs/src/watch.js":
+/*!****************************************************!*\
+  !*** ../node_modules/melanke-watchjs/src/watch.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17970,29 +18065,95 @@
 
 /***/ }),
 
-/***/ "../../../capivarajs/package.json":
-/*!*********************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/package.json ***!
-  \*********************************************************/
-/*! exports provided: name, version, description, main, repository, scripts, author, license, dependencies, keywords, nyc, devDependencies, default */
-/***/ (function(module) {
+/***/ "../node_modules/webpack/buildin/global.js":
+/*!*************************************************!*\
+  !*** ../node_modules/webpack/buildin/global.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-module.exports = {"name":"capivarajs","version":"3.3.4","description":"Um framework para criação de componentes.","main":"./src/index.ts","repository":{"url":"https://github.com/CapivaraJS/capivarajs","type":"git"},"scripts":{"dev":"webpack-dev-server --config ./config/webpack.dev.js","prod":"npm run test-single && webpack --config ./config/webpack.dev.js && webpack --config ./config/webpack.prod.js","test":"karma start","test-single":"karma start --single-run","e2e":"webpack-dev-server --config ./config/webpack.dev.js --t true","generate-report":"nyc --report-dir coverage npm run test && nyc report --reporter=text","coverage":"npm run generate-report && nyc report --reporter=text-lcov > coverage.lcov && codecov"},"author":"Capivara Team.","license":"MIT","dependencies":{"lodash":"^4.17.5","melanke-watchjs":"^1.4.3"},"keywords":["frameworkjs","web components","front end","documentation","components","gumga","capivara","capivarajs","js","javascript","framework"],"nyc":{"include":["src/*.ts","src/**/*.ts"],"exclude":["typings"],"extension":[".ts",".js"],"reporter":["json","html"],"all":true},"devDependencies":{"@babel/core":"^7.0.0-beta.42","@babel/preset-env":"^7.0.0-beta.42","@types/jasmine":"^2.6.3","@types/node":"^10.0.3","babel-loader":"^7.1.4","babel-polyfill":"^6.26.0","babel-preset-stage-0":"^6.24.1","codecov":"^3.0.0","css-loader":"^0.28.7","eslint":"^4.19.1","extract-text-webpack-plugin":"^4.0.0-beta.0","file-loader":"^1.1.5","html-loader":"^0.5.1","jasmine":"^3.1.0","jasmine-core":"^3.1.0","karma":"^2.0.2","karma-cli":"^1.0.1","karma-es6-shim":"^1.0.0","karma-jasmine":"^1.1.1","karma-phantomjs-launcher":"^1.0.4","karma-typescript":"^3.0.12","nightwatch":"^0.9.20","node-sass":"^4.7.2","nyc":"^11.6.0","style-loader":"^0.21.0","ts-loader":"^4.1.0","tslint":"^5.9.1","typescript":"^2.7.2","uglifyjs-webpack-plugin":"^1.1.2","weakset":"^1.0.0","webpack":"^4.8.1","webpack-cli":"^2.1.3","webpack-dev-server":"^3.1.1","webpack-merge":"^4.1.2"}};
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1, eval)("this");
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/common.ts":
-/*!**********************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/common.ts ***!
-  \**********************************************************/
+/***/ "../node_modules/webpack/buildin/module.js":
+/*!*************************************************!*\
+  !*** ../node_modules/webpack/buildin/module.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function(module) {
+	if (!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+
+/***/ "../package.json":
+/*!***********************!*\
+  !*** ../package.json ***!
+  \***********************/
+/*! exports provided: name, version, description, main, repository, scripts, author, license, dependencies, keywords, nyc, devDependencies, default */
+/***/ (function(module) {
+
+module.exports = {"name":"capivarajs","version":"3.7.0-rc","description":"Um framework para criação de componentes.","main":"./src/index.ts","repository":{"url":"https://github.com/CapivaraJS/capivarajs","type":"git"},"scripts":{"dev":"webpack-dev-server --config ./config/webpack.dev.js","prod":"npm run test-single && webpack --config ./config/webpack.dev.js && webpack --config ./config/webpack.prod.js","test":"karma start","test-single":"karma start --single-run","e2e":"webpack-dev-server --config ./config/webpack.dev.js --t true","generate-report":"nyc --report-dir coverage npm run test && nyc report --reporter=text","coverage":"npm run generate-report && nyc report --reporter=text-lcov > coverage.lcov && codecov"},"author":"Capivara Team.","license":"MIT","dependencies":{"lodash":"^4.17.5","melanke-watchjs":"^1.4.3"},"keywords":["frameworkjs","web components","front end","documentation","components","gumga","capivara","capivarajs","js","javascript","framework"],"nyc":{"include":["src/*.ts","src/**/*.ts"],"exclude":["typings"],"extension":[".ts",".js"],"reporter":["json","html"],"all":true},"devDependencies":{"@babel/core":"^7.0.0-beta.42","@babel/preset-env":"^7.0.0-beta.42","@types/jasmine":"^2.6.3","@types/node":"^10.0.3","babel-loader":"^7.1.4","babel-polyfill":"^6.26.0","babel-preset-stage-0":"^6.24.1","codecov":"^3.0.0","eslint":"^4.19.1","css-loader":"^1.0.0","extract-text-webpack-plugin":"^4.0.0-beta.0","file-loader":"^1.1.5","html-loader":"^0.5.1","jasmine":"^3.1.0","jasmine-core":"^3.1.0","karma":"^2.0.2","karma-cli":"^1.0.1","karma-es6-shim":"^1.0.0","karma-jasmine":"^1.1.1","karma-phantomjs-launcher":"^1.0.4","karma-typescript":"^3.0.12","nightwatch":"^0.9.20","node-sass":"^4.7.2","nyc":"^12.0.1","style-loader":"^0.21.0","ts-loader":"^4.1.0","tslint":"^5.9.1","typescript":"^2.7.2","uglifyjs-webpack-plugin":"^1.1.2","weakset":"^1.0.0","webpack":"^4.8.1","webpack-cli":"^2.1.3","webpack-dev-server":"^3.1.1","webpack-merge":"^4.1.2"}};
+
+/***/ }),
+
+/***/ "../src/common.ts":
+/*!************************!*\
+  !*** ../src/common.ts ***!
+  \************************/
 /*! exports provided: Common */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Common", function() { return Common; });
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ "../../../capivarajs/src/constants.ts");
-/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./core */ "../../../capivarajs/src/core/index.ts");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ */ "../src/index.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "../src/constants.ts");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./core */ "../src/core/index.ts");
+
 
 
 var Common;
@@ -18011,7 +18172,7 @@ var Common;
     function evalInContext(source, context, prefix) {
         if (source) {
             try {
-                return _core__WEBPACK_IMPORTED_MODULE_1__["Eval"].exec(source, context, prefix);
+                return _core__WEBPACK_IMPORTED_MODULE_2__["Eval"].exec(source, context, prefix);
             }
             catch (e) { }
         }
@@ -18023,55 +18184,55 @@ var Common;
     }
     Common.getFirstKey = getFirstKey;
     function getAttributeCpShow(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].SHOW_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].SHOW_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpShow = getAttributeCpShow;
     function getAttributeCpIf(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].IF_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].IF_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpIf = getAttributeCpIf;
     function getAttributeCpElseIf(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].ELSE_IF_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].ELSE_IF_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpElseIf = getAttributeCpElseIf;
     function getAttributeCpElse(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].ELSE_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].ELSE_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpElse = getAttributeCpElse;
     function getAttributeCpInit(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].INIT_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].INIT_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpInit = getAttributeCpInit;
     function getAttributeCpStyle(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].STYLE_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].STYLE_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpStyle = getAttributeCpStyle;
     function getAttributeCpClass(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].CLASS_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].CLASS_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpClass = getAttributeCpClass;
     function getAttributeCpSrc(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].SRC_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].SRC_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpSrc = getAttributeCpSrc;
     function getAttributeCpDisable(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].DISABLE_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].DISABLE_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpDisable = getAttributeCpDisable;
     function getAttributeCpFocus(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].FOCUS_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].FOCUS_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpFocus = getAttributeCpFocus;
     function getAttributeCpHide(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].HIDE_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].HIDE_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpHide = getAttributeCpHide;
     function getAttributeCpBlur(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].BLUR_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].BLUR_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpBlur = getAttributeCpBlur;
     function getScope(element) {
-        return element[_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].SCOPE_ATTRIBUTE_NAME];
+        return element[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].SCOPE_ATTRIBUTE_NAME];
     }
     Common.getScope = getScope;
     function isComponent(element) {
@@ -18104,9 +18265,7 @@ var Common;
         if (element.replaceWith) {
             element.replaceWith(elementComment);
         }
-        if (element.$instance) {
-            element.$instance.destroy();
-        }
+        ___WEBPACK_IMPORTED_MODULE_0__["default"].destroyIfComponent(element);
     }
     Common.destroyElement = destroyElement;
     function createElement(element, elementComment) {
@@ -18114,16 +18273,14 @@ var Common;
         if (elementComment.replaceWith) {
             elementComment.replaceWith(element);
         }
-        if (element.$instance) {
-            element.$instance.initController();
-        }
+        ___WEBPACK_IMPORTED_MODULE_0__["default"].constroyIfComponent(element, true);
     }
     Common.createElement = createElement;
     function getAllScopes(element, scopes) {
         if (scopes === void 0) { scopes = []; }
-        if (element && element[_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].SCOPE_ATTRIBUTE_NAME]) {
-            if (scopes.filter(function (s) { return s.id === element[_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].SCOPE_ATTRIBUTE_NAME].id; }).length === 0) {
-                scopes.push(element[_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].SCOPE_ATTRIBUTE_NAME]);
+        if (element && element[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].SCOPE_ATTRIBUTE_NAME]) {
+            if (scopes.filter(function (s) { return s.id === element[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].SCOPE_ATTRIBUTE_NAME].id; }).length === 0) {
+                scopes.push(element[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].SCOPE_ATTRIBUTE_NAME]);
             }
         }
         if (element && element.parentNode) {
@@ -18154,13 +18311,14 @@ var Common;
     Common.appendAfter = appendAfter;
     function setScopeId(scope) {
         if (!scope.id) {
+            ___WEBPACK_IMPORTED_MODULE_0__["default"].LAST_SCOPE_ID++;
             window['capivara'].scopes.push(scope);
-            scope.id = window['capivara'].scopes.length;
+            scope.id = ___WEBPACK_IMPORTED_MODULE_0__["default"].LAST_SCOPE_ID;
         }
     }
     Common.setScopeId = setScopeId;
     function parentHasIgnore(element) {
-        if (element.hasAttribute && (element.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].IGNORE_BINDINGS) || element.nodeName === 'CP-TRANSCLUDE')) {
+        if (element.hasAttribute && (element.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].IGNORE_BINDINGS) || element.nodeName === 'CP-TRANSCLUDE')) {
             return true;
         }
         if (element.parentNode) {
@@ -18183,10 +18341,10 @@ var Common;
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/constants.ts":
-/*!*************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/constants.ts ***!
-  \*************************************************************/
+/***/ "../src/constants.ts":
+/*!***************************!*\
+  !*** ../src/constants.ts ***!
+  \***************************/
 /*! exports provided: Constants */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -18232,28 +18390,29 @@ var Constants = {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/capivara.ts":
-/*!*****************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/capivara.ts ***!
-  \*****************************************************************/
+/***/ "../src/core/capivara.ts":
+/*!*******************************!*\
+  !*** ../src/core/capivara.ts ***!
+  \*******************************/
 /*! exports provided: Capivara */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Capivara", function() { return Capivara; });
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "../../../capivarajs/src/constants.ts");
-/* harmony import */ var _scope_scope__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scope/scope */ "../../../capivarajs/src/scope/scope.ts");
-/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component */ "../../../capivarajs/src/core/component.ts");
-/* harmony import */ var _component_instance__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component.instance */ "../../../capivarajs/src/core/component.instance.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "../src/constants.ts");
+/* harmony import */ var _scope_scope__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scope/scope */ "../src/scope/scope.ts");
+/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component */ "../src/core/component.ts");
+/* harmony import */ var _component_instance__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component.instance */ "../src/core/component.instance.ts");
 
 
 
 
-var packageJson = __webpack_require__(/*! ../../package.json */ "../../../capivarajs/package.json");
+var packageJson = __webpack_require__(/*! ../../package.json */ "../package.json");
 var Capivara = /** @class */ (function () {
     function Capivara() {
         var _this = this;
+        this.LAST_SCOPE_ID = 0;
         this.version = packageJson.version;
         this.components = {};
         this.scopes = [];
@@ -18265,6 +18424,7 @@ var Capivara = /** @class */ (function () {
                         return attributeNode.nodeName.indexOf(attr) === 0;
                     });
                 },
+                configurable: true,
             });
         }
         if (!Element.prototype.hasOwnProperty('hasAttributeStartingWith')) {
@@ -18272,6 +18432,7 @@ var Capivara = /** @class */ (function () {
                 value: function hasAttributeStartingWith(attr) {
                     return this.getAttributeStartingWith(attr).length > 0;
                 },
+                configurable: true,
             });
         }
         if (document.readyState === 'complete' ||
@@ -18297,18 +18458,25 @@ var Capivara = /** @class */ (function () {
             });
         });
     };
-    Capivara.prototype.constroyIfComponent = function (addedNode) {
+    Capivara.prototype.hasRepeat = function (elm) {
+        return elm && elm.classList && elm.classList.contains('binding-repeat');
+    };
+    Capivara.prototype.constroyIfComponent = function (addedNode, forceCreated) {
         var _this = this;
         var component = this.components[addedNode.nodeName];
-        if (component) {
+        if (component && (forceCreated || !addedNode.created)) {
+            addedNode.created = true;
             component.createNewInstance(addedNode).create();
         }
-        if (addedNode.children) {
-            (Array.from(addedNode.children) || []).forEach(function (child) { return _this.constroyIfComponent(child); });
+        if (addedNode.children && (forceCreated || !this.hasRepeat(addedNode))) {
+            (Array.from(addedNode.children) || []).forEach(function (child) {
+                _this.constroyIfComponent(child, forceCreated);
+            });
         }
     };
     Capivara.prototype.destroyIfComponent = function (removedNode) {
         var _this = this;
+        removedNode.created = false;
         if (removedNode['$instance'] && !removedNode['$instance'].destroyed) {
             removedNode['$instance'].destroy();
         }
@@ -18581,26 +18749,26 @@ var Capivara = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/component.instance.ts":
-/*!***************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/component.instance.ts ***!
-  \***************************************************************************/
+/***/ "../src/core/component.instance.ts":
+/*!*****************************************!*\
+  !*** ../src/core/component.instance.ts ***!
+  \*****************************************/
 /*! exports provided: ComponentInstance */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComponentInstance", function() { return ComponentInstance; });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../../../capivarajs/node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var melanke_watchjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! melanke-watchjs */ "../../../capivarajs/node_modules/melanke-watchjs/src/watch.js");
+/* harmony import */ var melanke_watchjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! melanke-watchjs */ "../node_modules/melanke-watchjs/src/watch.js");
 /* harmony import */ var melanke_watchjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(melanke_watchjs__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../constants */ "../../../capivarajs/src/constants.ts");
-/* harmony import */ var _scope_scope_proxy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../scope/scope.proxy */ "../../../capivarajs/src/scope/scope.proxy.ts");
-/* harmony import */ var _controller__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./controller */ "../../../capivarajs/src/core/controller.ts");
-/* harmony import */ var _magic_magic__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./magic/magic */ "../../../capivarajs/src/core/magic/magic.ts");
-/* harmony import */ var _observer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./observer */ "../../../capivarajs/src/core/observer/index.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../constants */ "../src/constants.ts");
+/* harmony import */ var _scope_scope_proxy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../scope/scope.proxy */ "../src/scope/scope.proxy.ts");
+/* harmony import */ var _controller__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./controller */ "../src/core/controller.ts");
+/* harmony import */ var _magic_magic__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./magic/magic */ "../src/core/magic/magic.ts");
+/* harmony import */ var _observer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./observer */ "../src/core/observer/index.ts");
 
 
 
@@ -18658,7 +18826,9 @@ var ComponentInstance = /** @class */ (function () {
         });
     };
     ComponentInstance.prototype.initController = function () {
-        if (this.destroyed) {
+        var _a;
+        if (this.destroyed && document.body.contains(this.element)) {
+            this.destroyed = false;
             if (this.config.controller) {
                 var args = [
                     this.componentScope.element[_constants__WEBPACK_IMPORTED_MODULE_3__["Constants"].SCOPE_ATTRIBUTE_NAME],
@@ -18674,14 +18844,13 @@ var ComponentInstance = /** @class */ (function () {
             if (this.componentScope[this.config.controllerAs] && this.componentScope[this.config.controllerAs].$onInit) {
                 this.componentScope[this.config.controllerAs].$onInit();
             }
-            this.destroyed = false;
             Object.defineProperty(this.componentScope, '__$controllerAs__', {
                 value: this.config.controllerAs,
+                configurable: true,
             });
             _common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).$emit('$onInit');
             _common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).mapDom.reload();
         }
-        var _a;
     };
     /**
      * @description Aplica os bindings|constants|functions
@@ -18713,9 +18882,17 @@ var ComponentInstance = /** @class */ (function () {
         if (this.componentScope[this.config.controllerAs] && this.componentScope[this.config.controllerAs].$destroy) {
             this.componentScope[this.config.controllerAs].$destroy();
         }
-        window['capivara'].scopes = window['capivara'].scopes.filter(function (scope) {
-            return scope.id !== _this.componentScope.element[_constants__WEBPACK_IMPORTED_MODULE_3__["Constants"].SCOPE_ATTRIBUTE_NAME].id;
-        });
+        try {
+            window['capivara'].scopes = window['capivara'].scopes.filter(function (scope) {
+                return scope.id !== _this.componentScope.element[_constants__WEBPACK_IMPORTED_MODULE_3__["Constants"].SCOPE_ATTRIBUTE_NAME].id &&
+                    scope.id !== _this.contextObj.element[_constants__WEBPACK_IMPORTED_MODULE_3__["Constants"].SCOPE_ATTRIBUTE_NAME].id;
+            });
+        }
+        catch (e) {
+            window['capivara'].scopes = window['capivara'].scopes.filter(function (scope) {
+                return document.body.contains(_this.componentScope.element);
+            });
+        }
     };
     /**
      * @description
@@ -18743,8 +18920,8 @@ var ComponentInstance = /** @class */ (function () {
         (this.config.bindings || []).forEach(function (key) {
             _this.setAttributeValue(_this.bindingsValue, key);
             _this.createObserverContext(_this.bindingsValue, key);
-            _this.createObserverScope(_this.bindingsValue, key);
         });
+        this.createObserverScope(this.bindingsValue);
     };
     ComponentInstance.prototype.applyBindingsComponentMagic = function () {
         var _this = this;
@@ -18759,14 +18936,14 @@ var ComponentInstance = /** @class */ (function () {
                 _this.bindingsValue[bindingKey] = valueAttribute;
                 _this.setAttributeValue(_this.bindingsValue, bindingKey);
                 _this.createObserverContext(_this.bindingsValue, bindingKey);
-                _this.createObserverScope(_this.bindingsValue, bindingKey);
             }
         });
+        this.createObserverScope(this.bindingsValue);
     };
     /**
     * @description Observa o componente quando houver alteração é modificado o contexto
     */
-    ComponentInstance.prototype.createObserverScope = function (_bindings, key) {
+    ComponentInstance.prototype.createObserverScope = function (_bindings) {
         var _this = this;
         if (_bindings === void 0) { _bindings = {}; }
         var $ctrl = _common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).scope[this.config.controllerAs];
@@ -18781,6 +18958,7 @@ var ComponentInstance = /** @class */ (function () {
                 });
             },
             writable: true,
+            configurable: true,
         });
     };
     ComponentInstance.prototype.forceUpdateContext = function () {
@@ -18809,39 +18987,27 @@ var ComponentInstance = /** @class */ (function () {
         if (_bindings === void 0) { _bindings = {}; }
         return _bindings[key].indexOf('.') !== -1 ? _bindings[key].substring(0, _bindings[key].indexOf('.')) : _bindings[key];
     };
-    ComponentInstance.prototype.observeAndSetValues = function (obj, _bindings, key) {
-        var _this = this;
-        _observer__WEBPACK_IMPORTED_MODULE_7__["Observe"].observe(obj, function (changes) { return _this.setAttributeValue(_bindings, key); });
-    };
     ComponentInstance.prototype.createObserverContext = function (_bindings, key) {
         var _this = this;
         if (!_bindings[key]) {
             return;
         }
-        if (this.contextObj instanceof _scope_scope_proxy__WEBPACK_IMPORTED_MODULE_4__["ScopeProxy"]) {
-            if (this.contextObj[this.config.controllerAs]) {
-                this.observeAndSetValues(this.contextObj[this.config.controllerAs], _bindings, key);
-            }
-            else {
-                this.observeAndSetValues(this.contextObj, _bindings, key);
-            }
-        }
-        else {
-            var attrToObserve_1 = ComponentInstance.getFirstAttribute(_bindings, key);
-            this.listenerContextBindings[attrToObserve_1] = this.listenerContextBindings[attrToObserve_1] || [];
-            melanke_watchjs__WEBPACK_IMPORTED_MODULE_1___default.a.watch(this.contextObj, attrToObserve_1, function () {
-                _this.listenerContextBindings[attrToObserve_1].forEach(function (keyListener) {
-                    _this.setAttributeValue(_bindings, keyListener);
-                });
-            });
-            this.listenerContextBindings[attrToObserve_1].push(key);
+        if (!(this.contextObj instanceof _scope_scope_proxy__WEBPACK_IMPORTED_MODULE_4__["ScopeProxy"])) {
+            var attrToObserve = ComponentInstance.getFirstAttribute(_bindings, key);
+            melanke_watchjs__WEBPACK_IMPORTED_MODULE_1___default.a.watch(this.contextObj, attrToObserve, function () {
+                _this.setAttributeValue(_bindings, key);
+            }, 1);
         }
     };
     ComponentInstance.prototype.setAttributeValue = function (_bindings, key) {
         if (_bindings === void 0) { _bindings = {}; }
-        lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).scope, this.config.controllerAs + '.$bindings.' + key, lodash__WEBPACK_IMPORTED_MODULE_0__["get"](this.contextObj, _bindings[key]));
-        lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).scope, '$bindings.' + key, lodash__WEBPACK_IMPORTED_MODULE_0__["get"](this.contextObj, _bindings[key]));
+        var scope = _common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).scope;
+        lodash__WEBPACK_IMPORTED_MODULE_0__["set"](scope, this.config.controllerAs + '.$bindings.' + key, lodash__WEBPACK_IMPORTED_MODULE_0__["get"](this.contextObj, _bindings[key]));
+        lodash__WEBPACK_IMPORTED_MODULE_0__["set"](scope, '$bindings.' + key, lodash__WEBPACK_IMPORTED_MODULE_0__["get"](this.contextObj, _bindings[key]));
         _common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).mapDom.reload();
+        if (scope[this.config.controllerAs] && scope[this.config.controllerAs].$onChanges) {
+            scope[this.config.controllerAs].$onChanges();
+        }
     };
     /**
      * @description Crie valores sem referências
@@ -18893,11 +19059,14 @@ var ComponentInstance = /** @class */ (function () {
             if (valueAttribute) {
                 var indexRelative = valueAttribute.indexOf('(');
                 var callback = indexRelative !== -1 ? lodash__WEBPACK_IMPORTED_MODULE_0__["get"](_this.contextObj, valueAttribute.substring(0, indexRelative)) : lodash__WEBPACK_IMPORTED_MODULE_0__["get"](_this.contextObj, valueAttribute);
-                Object.defineProperty(callback, '__ctx__', {
-                    value: _this.contextObj,
-                });
-                lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(_this.element).scope, _this.config.controllerAs + '.$functions.' + functionKey, callback);
-                lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(_this.element).scope, '$functions.' + functionKey, callback);
+                if (callback) {
+                    Object.defineProperty(callback, '__ctx__', {
+                        value: _this.contextObj,
+                        configurable: true,
+                    });
+                    lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(_this.element).scope, _this.config.controllerAs + '.$functions.' + functionKey, callback);
+                    lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(_this.element).scope, '$functions.' + functionKey, callback);
+                }
             }
         });
     };
@@ -18915,17 +19084,17 @@ var ComponentInstance = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/component.ts":
-/*!******************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/component.ts ***!
-  \******************************************************************/
+/***/ "../src/core/component.ts":
+/*!********************************!*\
+  !*** ../src/core/component.ts ***!
+  \********************************/
 /*! exports provided: Component */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Component", function() { return Component; });
-/* harmony import */ var _component_instance__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./component.instance */ "../../../capivarajs/src/core/component.instance.ts");
+/* harmony import */ var _component_instance__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./component.instance */ "../src/core/component.instance.ts");
 
 var Component = /** @class */ (function () {
     function Component(_componentName, config) {
@@ -18952,18 +19121,18 @@ var Component = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/controller.ts":
-/*!*******************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/controller.ts ***!
-  \*******************************************************************/
+/***/ "../src/core/controller.ts":
+/*!*********************************!*\
+  !*** ../src/core/controller.ts ***!
+  \*********************************/
 /*! exports provided: Controller */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Controller", function() { return Controller; });
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "../../../capivarajs/src/constants.ts");
-/* harmony import */ var _scope_scope__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scope/scope */ "../../../capivarajs/src/scope/scope.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "../src/constants.ts");
+/* harmony import */ var _scope_scope__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scope/scope */ "../src/scope/scope.ts");
 
 
 var Controller = /** @class */ (function () {
@@ -18981,10 +19150,10 @@ var Controller = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/element.ts":
-/*!****************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/element.ts ***!
-  \****************************************************************/
+/***/ "../src/core/element.ts":
+/*!******************************!*\
+  !*** ../src/core/element.ts ***!
+  \******************************/
 /*! exports provided: CapivaraElement */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -19027,17 +19196,17 @@ var CapivaraElement = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/eval.ts":
-/*!*************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/eval.ts ***!
-  \*************************************************************/
+/***/ "../src/core/eval.ts":
+/*!***************************!*\
+  !*** ../src/core/eval.ts ***!
+  \***************************/
 /*! exports provided: Eval */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Eval", function() { return Eval; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common */ "../../../capivarajs/src/common.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common */ "../src/common.ts");
 
 var Eval;
 (function (Eval) {
@@ -19107,31 +19276,31 @@ var Eval;
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/index.ts":
-/*!**************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/index.ts ***!
-  \**************************************************************/
+/***/ "../src/core/index.ts":
+/*!****************************!*\
+  !*** ../src/core/index.ts ***!
+  \****************************/
 /*! exports provided: Capivara, Controller, ComponentInstance, Component, Eval, Observe */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _capivara__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./capivara */ "../../../capivarajs/src/core/capivara.ts");
+/* harmony import */ var _capivara__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./capivara */ "../src/core/capivara.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Capivara", function() { return _capivara__WEBPACK_IMPORTED_MODULE_0__["Capivara"]; });
 
-/* harmony import */ var _controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./controller */ "../../../capivarajs/src/core/controller.ts");
+/* harmony import */ var _controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./controller */ "../src/core/controller.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Controller", function() { return _controller__WEBPACK_IMPORTED_MODULE_1__["Controller"]; });
 
-/* harmony import */ var _component_instance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component.instance */ "../../../capivarajs/src/core/component.instance.ts");
+/* harmony import */ var _component_instance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component.instance */ "../src/core/component.instance.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentInstance", function() { return _component_instance__WEBPACK_IMPORTED_MODULE_2__["ComponentInstance"]; });
 
-/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component */ "../../../capivarajs/src/core/component.ts");
+/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component */ "../src/core/component.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Component", function() { return _component__WEBPACK_IMPORTED_MODULE_3__["Component"]; });
 
-/* harmony import */ var _eval__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./eval */ "../../../capivarajs/src/core/eval.ts");
+/* harmony import */ var _eval__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./eval */ "../src/core/eval.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Eval", function() { return _eval__WEBPACK_IMPORTED_MODULE_4__["Eval"]; });
 
-/* harmony import */ var _observer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./observer */ "../../../capivarajs/src/core/observer/index.ts");
+/* harmony import */ var _observer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./observer */ "../src/core/observer/index.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Observe", function() { return _observer__WEBPACK_IMPORTED_MODULE_5__["Observe"]; });
 
 
@@ -19144,22 +19313,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/magic/check.context.ts":
-/*!****************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/magic/check.context.ts ***!
-  \****************************************************************************/
+/***/ "../src/core/magic/check.context.ts":
+/*!******************************************!*\
+  !*** ../src/core/magic/check.context.ts ***!
+  \******************************************/
 /*! exports provided: CheckContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckContext", function() { return CheckContext; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _types_angular_context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types/angular.context */ "../../../capivarajs/src/core/magic/types/angular.context.ts");
-/* harmony import */ var _types_angularjs_context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./types/angularjs.context */ "../../../capivarajs/src/core/magic/types/angularjs.context.ts");
-/* harmony import */ var _types_capivara_context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./types/capivara.context */ "../../../capivarajs/src/core/magic/types/capivara.context.ts");
-/* harmony import */ var _types_react_context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./types/react.context */ "../../../capivarajs/src/core/magic/types/react.context.ts");
-/* harmony import */ var _types_vuejs_context__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./types/vuejs.context */ "../../../capivarajs/src/core/magic/types/vuejs.context.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _types_angular_context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types/angular.context */ "../src/core/magic/types/angular.context.ts");
+/* harmony import */ var _types_angularjs_context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./types/angularjs.context */ "../src/core/magic/types/angularjs.context.ts");
+/* harmony import */ var _types_capivara_context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./types/capivara.context */ "../src/core/magic/types/capivara.context.ts");
+/* harmony import */ var _types_react_context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./types/react.context */ "../src/core/magic/types/react.context.ts");
+/* harmony import */ var _types_vuejs_context__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./types/vuejs.context */ "../src/core/magic/types/vuejs.context.ts");
 
 
 
@@ -19185,10 +19354,10 @@ var CheckContext;
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/magic/context.ts":
-/*!**********************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/magic/context.ts ***!
-  \**********************************************************************/
+/***/ "../src/core/magic/context.ts":
+/*!************************************!*\
+  !*** ../src/core/magic/context.ts ***!
+  \************************************/
 /*! exports provided: Context */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -19216,17 +19385,17 @@ var Context = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/magic/magic.ts":
-/*!********************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/magic/magic.ts ***!
-  \********************************************************************/
+/***/ "../src/core/magic/magic.ts":
+/*!**********************************!*\
+  !*** ../src/core/magic/magic.ts ***!
+  \**********************************/
 /*! exports provided: Magic */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Magic", function() { return Magic; });
-/* harmony import */ var _check_context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./check.context */ "../../../capivarajs/src/core/magic/check.context.ts");
+/* harmony import */ var _check_context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./check.context */ "../src/core/magic/check.context.ts");
 
 var Magic;
 (function (Magic) {
@@ -19239,17 +19408,17 @@ var Magic;
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/magic/types/angular.context.ts":
-/*!************************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/magic/types/angular.context.ts ***!
-  \************************************************************************************/
+/***/ "../src/core/magic/types/angular.context.ts":
+/*!**************************************************!*\
+  !*** ../src/core/magic/types/angular.context.ts ***!
+  \**************************************************/
 /*! exports provided: AngularContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AngularContext", function() { return AngularContext; });
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "../../../capivarajs/src/core/magic/context.ts");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "../src/core/magic/context.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -19281,17 +19450,17 @@ var AngularContext = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/magic/types/angularjs.context.ts":
-/*!**************************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/magic/types/angularjs.context.ts ***!
-  \**************************************************************************************/
+/***/ "../src/core/magic/types/angularjs.context.ts":
+/*!****************************************************!*\
+  !*** ../src/core/magic/types/angularjs.context.ts ***!
+  \****************************************************/
 /*! exports provided: AngularJSContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AngularJSContext", function() { return AngularJSContext; });
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "../../../capivarajs/src/core/magic/context.ts");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "../src/core/magic/context.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -19320,19 +19489,19 @@ var AngularJSContext = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/magic/types/capivara.context.ts":
-/*!*************************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/magic/types/capivara.context.ts ***!
-  \*************************************************************************************/
+/***/ "../src/core/magic/types/capivara.context.ts":
+/*!***************************************************!*\
+  !*** ../src/core/magic/types/capivara.context.ts ***!
+  \***************************************************/
 /*! exports provided: CapivaraJSContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CapivaraJSContext", function() { return CapivaraJSContext; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../constants */ "../../../capivarajs/src/constants.ts");
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../context */ "../../../capivarajs/src/core/magic/context.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../constants */ "../src/constants.ts");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../context */ "../src/core/magic/context.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -19368,17 +19537,17 @@ var CapivaraJSContext = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/magic/types/react.context.ts":
-/*!**********************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/magic/types/react.context.ts ***!
-  \**********************************************************************************/
+/***/ "../src/core/magic/types/react.context.ts":
+/*!************************************************!*\
+  !*** ../src/core/magic/types/react.context.ts ***!
+  \************************************************/
 /*! exports provided: ReactContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReactContext", function() { return ReactContext; });
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "../../../capivarajs/src/core/magic/context.ts");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "../src/core/magic/context.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -19437,17 +19606,17 @@ var ReactContext = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/magic/types/vuejs.context.ts":
-/*!**********************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/magic/types/vuejs.context.ts ***!
-  \**********************************************************************************/
+/***/ "../src/core/magic/types/vuejs.context.ts":
+/*!************************************************!*\
+  !*** ../src/core/magic/types/vuejs.context.ts ***!
+  \************************************************/
 /*! exports provided: VueJSContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VueJSContext", function() { return VueJSContext; });
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "../../../capivarajs/src/core/magic/context.ts");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "../src/core/magic/context.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -19484,18 +19653,18 @@ var VueJSContext = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/observer/index.ts":
-/*!***********************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/observer/index.ts ***!
-  \***********************************************************************/
+/***/ "../src/core/observer/index.ts":
+/*!*************************************!*\
+  !*** ../src/core/observer/index.ts ***!
+  \*************************************/
 /*! exports provided: Observe */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Observe", function() { return Observe; });
-/* harmony import */ var _polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./polyfill */ "../../../capivarajs/src/core/observer/polyfill.ts");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util */ "../../../capivarajs/src/core/observer/util.ts");
+/* harmony import */ var _polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./polyfill */ "../src/core/observer/polyfill.ts");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util */ "../src/core/observer/util.ts");
 
 
 var Observe;
@@ -19577,17 +19746,17 @@ var Observe;
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/observer/polyfill.ts":
-/*!**************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/observer/polyfill.ts ***!
-  \**************************************************************************/
+/***/ "../src/core/observer/polyfill.ts":
+/*!****************************************!*\
+  !*** ../src/core/observer/polyfill.ts ***!
+  \****************************************/
 /*! exports provided: Polyfill */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Polyfill", function() { return Polyfill; });
-/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "../../../capivarajs/src/core/observer/index.ts");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "../src/core/observer/index.ts");
 
 var Polyfill;
 (function (Polyfill) {
@@ -19670,10 +19839,10 @@ var Polyfill;
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/observer/util.ts":
-/*!**********************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/observer/util.ts ***!
-  \**********************************************************************/
+/***/ "../src/core/observer/util.ts":
+/*!************************************!*\
+  !*** ../src/core/observer/util.ts ***!
+  \************************************/
 /*! exports provided: Util */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -19715,7 +19884,10 @@ var Util;
         }
         for (var j = 0; j < a2L; j++) {
             if (a[arr2[j]]) {
-                delete a[arr2[j]];
+                try {
+                    delete a[arr2[j]];
+                }
+                catch (e) { }
             }
             else {
                 a[arr2[j]] = 2;
@@ -19763,10 +19935,10 @@ var Util;
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/core/util/keycodes.enum.ts":
-/*!***************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/core/util/keycodes.enum.ts ***!
-  \***************************************************************************/
+/***/ "../src/core/util/keycodes.enum.ts":
+/*!*****************************************!*\
+  !*** ../src/core/util/keycodes.enum.ts ***!
+  \*****************************************/
 /*! exports provided: KeyCode */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -19894,23 +20066,23 @@ var KeyCode;
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/index.ts":
-/*!*********************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/index.ts ***!
-  \*********************************************************/
+/***/ "../src/index.ts":
+/*!***********************!*\
+  !*** ../src/index.ts ***!
+  \***********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_capivara__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core/capivara */ "../../../capivarajs/src/core/capivara.ts");
+/* harmony import */ var _core_capivara__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core/capivara */ "../src/core/capivara.ts");
 
 (function (capivara) {
     if (!capivara) {
         window["capivara"] = new _core_capivara__WEBPACK_IMPORTED_MODULE_0__["Capivara"]();
     }
     else {
-        console.warn("CapivaraJS tried to load more than once.");
+        console.warn("Gee! CapivaraJS tried to load more than once.");
     }
 })(window["capivara"]);
 /* harmony default export */ __webpack_exports__["default"] = (window['capivara']);
@@ -19918,18 +20090,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-attr.ts":
-/*!*************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-attr.ts ***!
-  \*************************************************************************/
+/***/ "../src/map/directive/cp-attr.ts":
+/*!***************************************!*\
+  !*** ../src/map/directive/cp-attr.ts ***!
+  \***************************************/
 /*! exports provided: CPAttr */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPAttr", function() { return CPAttr; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPAttr = /** @class */ (function () {
@@ -19971,18 +20143,18 @@ var CPAttr = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-blur.ts":
-/*!*************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-blur.ts ***!
-  \*************************************************************************/
+/***/ "../src/map/directive/cp-blur.ts":
+/*!***************************************!*\
+  !*** ../src/map/directive/cp-blur.ts ***!
+  \***************************************/
 /*! exports provided: CPBlur */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPBlur", function() { return CPBlur; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPBlur = /** @class */ (function () {
@@ -19999,8 +20171,8 @@ var CPBlur = /** @class */ (function () {
         this.init();
     };
     CPBlur.prototype.onBlur = function (evt) {
-        _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(evt.target['cpBlur'].element, evt.target['cpBlur'].attribute, (_a = {}, _a[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].EVENT_ATTRIBUTE_NAME] = evt, _a));
         var _a;
+        _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(evt.target['cpBlur'].element, evt.target['cpBlur'].attribute, (_a = {}, _a[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].EVENT_ATTRIBUTE_NAME] = evt, _a));
     };
     CPBlur.prototype.init = function () {
         // Remove old event
@@ -20015,18 +20187,18 @@ var CPBlur = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-change.ts":
-/*!***************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-change.ts ***!
-  \***************************************************************************/
+/***/ "../src/map/directive/cp-change.ts":
+/*!*****************************************!*\
+  !*** ../src/map/directive/cp-change.ts ***!
+  \*****************************************/
 /*! exports provided: CPChange */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPChange", function() { return CPChange; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPChange = /** @class */ (function () {
@@ -20059,17 +20231,17 @@ var CPChange = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-class.ts":
-/*!**************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-class.ts ***!
-  \**************************************************************************/
+/***/ "../src/map/directive/cp-class.ts":
+/*!****************************************!*\
+  !*** ../src/map/directive/cp-class.ts ***!
+  \****************************************/
 /*! exports provided: CPClass */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPClass", function() { return CPClass; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
 
 var CPClass = /** @class */ (function () {
     function CPClass(_element, _map) {
@@ -20146,20 +20318,20 @@ var CPClass = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-click.ts":
-/*!**************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-click.ts ***!
-  \**************************************************************************/
+/***/ "../src/map/directive/cp-click.ts":
+/*!****************************************!*\
+  !*** ../src/map/directive/cp-click.ts ***!
+  \****************************************/
 /*! exports provided: CPClick */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPClick", function() { return CPClick; });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../../../capivarajs/node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 
@@ -20190,9 +20362,9 @@ var CPClick = /** @class */ (function () {
     CPClick.prototype.init = function () {
         var _this = this;
         var onClick = function (evt) {
+            var _a;
             _this.attribute = _this.attribute.trim();
             _common__WEBPACK_IMPORTED_MODULE_1__["Common"].executeFunctionCallback(_this.element, _this.attribute, (_a = {}, _a[_constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].EVENT_ATTRIBUTE_NAME] = evt, _a));
-            var _a;
         };
         // Remove old event
         this.element.removeEventListener(this.eventName, onClick);
@@ -20206,18 +20378,18 @@ var CPClick = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-disabled.ts":
-/*!*****************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-disabled.ts ***!
-  \*****************************************************************************/
+/***/ "../src/map/directive/cp-disabled.ts":
+/*!*******************************************!*\
+  !*** ../src/map/directive/cp-disabled.ts ***!
+  \*******************************************/
 /*! exports provided: CPDisabled */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPDisabled", function() { return CPDisabled; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPDisabled = /** @class */ (function () {
@@ -20252,18 +20424,18 @@ var CPDisabled = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-else-if.ts":
-/*!****************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-else-if.ts ***!
-  \****************************************************************************/
+/***/ "../src/map/directive/cp-else-if.ts":
+/*!******************************************!*\
+  !*** ../src/map/directive/cp-else-if.ts ***!
+  \******************************************/
 /*! exports provided: CPElseIf */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPElseIf", function() { return CPElseIf; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPElseIf = /** @class */ (function () {
@@ -20322,18 +20494,18 @@ var CPElseIf = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-else.ts":
-/*!*************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-else.ts ***!
-  \*************************************************************************/
+/***/ "../src/map/directive/cp-else.ts":
+/*!***************************************!*\
+  !*** ../src/map/directive/cp-else.ts ***!
+  \***************************************/
 /*! exports provided: CPElse */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPElse", function() { return CPElse; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPElse = /** @class */ (function () {
@@ -20392,18 +20564,18 @@ var CPElse = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-focus.ts":
-/*!**************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-focus.ts ***!
-  \**************************************************************************/
+/***/ "../src/map/directive/cp-focus.ts":
+/*!****************************************!*\
+  !*** ../src/map/directive/cp-focus.ts ***!
+  \****************************************/
 /*! exports provided: CPFocus */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPFocus", function() { return CPFocus; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPFocus = /** @class */ (function () {
@@ -20420,8 +20592,8 @@ var CPFocus = /** @class */ (function () {
         this.init();
     };
     CPFocus.prototype.onFocus = function (evt) {
-        _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(evt.target['cpFocus'].element, evt.target['cpFocus'].attribute, (_a = {}, _a[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].EVENT_ATTRIBUTE_NAME] = evt, _a));
         var _a;
+        _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(evt.target['cpFocus'].element, evt.target['cpFocus'].attribute, (_a = {}, _a[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].EVENT_ATTRIBUTE_NAME] = evt, _a));
     };
     CPFocus.prototype.init = function () {
         // Remove old event
@@ -20436,18 +20608,18 @@ var CPFocus = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-hide.ts":
-/*!*************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-hide.ts ***!
-  \*************************************************************************/
+/***/ "../src/map/directive/cp-hide.ts":
+/*!***************************************!*\
+  !*** ../src/map/directive/cp-hide.ts ***!
+  \***************************************/
 /*! exports provided: CPHide */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPHide", function() { return CPHide; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPHide = /** @class */ (function () {
@@ -20484,18 +20656,18 @@ var CPHide = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-if.ts":
-/*!***********************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-if.ts ***!
-  \***********************************************************************/
+/***/ "../src/map/directive/cp-if.ts":
+/*!*************************************!*\
+  !*** ../src/map/directive/cp-if.ts ***!
+  \*************************************/
 /*! exports provided: CPIf */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPIf", function() { return CPIf; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPIf = /** @class */ (function () {
@@ -20527,9 +20699,11 @@ var CPIf = /** @class */ (function () {
             return;
         }
         try {
-            _common__WEBPACK_IMPORTED_MODULE_0__["Common"].createElement(this.element, this.elementComment);
             if (!_common__WEBPACK_IMPORTED_MODULE_0__["Common"].isValidCondition(this.element, _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getAttributeCpIf(this.element))) {
                 _common__WEBPACK_IMPORTED_MODULE_0__["Common"].destroyElement(this.element, this.elementComment);
+            }
+            else {
+                _common__WEBPACK_IMPORTED_MODULE_0__["Common"].createElement(this.element, this.elementComment);
             }
         }
         catch (ex) {
@@ -20543,18 +20717,18 @@ var CPIf = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-init.ts":
-/*!*************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-init.ts ***!
-  \*************************************************************************/
+/***/ "../src/map/directive/cp-init.ts":
+/*!***************************************!*\
+  !*** ../src/map/directive/cp-init.ts ***!
+  \***************************************/
 /*! exports provided: CPInit */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPInit", function() { return CPInit; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPInit = /** @class */ (function () {
@@ -20580,19 +20754,19 @@ var CPInit = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-key.ts":
-/*!************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-key.ts ***!
-  \************************************************************************/
+/***/ "../src/map/directive/cp-key.ts":
+/*!**************************************!*\
+  !*** ../src/map/directive/cp-key.ts ***!
+  \**************************************/
 /*! exports provided: CPKey */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPKey", function() { return CPKey; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
-/* harmony import */ var _core_util_keycodes_enum__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../core/util/keycodes.enum */ "../../../capivarajs/src/core/util/keycodes.enum.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
+/* harmony import */ var _core_util_keycodes_enum__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../core/util/keycodes.enum */ "../src/core/util/keycodes.enum.ts");
 
 
 
@@ -20616,6 +20790,7 @@ var CPKey = /** @class */ (function () {
         this.init();
     };
     CPKey.prototype.onKeyPress = function (evt) {
+        var _a, _b;
         var directiveName = 'cp-' + evt.type;
         if (evt.target && evt.target.hasAttributeStartingWith(directiveName)) {
             var attribute = evt.target.getAttributeStartingWith(directiveName)[0].name;
@@ -20631,7 +20806,6 @@ var CPKey = /** @class */ (function () {
                 }
             }
         }
-        var _a, _b;
     };
     CPKey.prototype.init = function () {
         var _this = this;
@@ -20651,20 +20825,20 @@ var CPKey = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-model.ts":
-/*!**************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-model.ts ***!
-  \**************************************************************************/
+/***/ "../src/map/directive/cp-model.ts":
+/*!****************************************!*\
+  !*** ../src/map/directive/cp-model.ts ***!
+  \****************************************/
 /*! exports provided: CPModel */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPModel", function() { return CPModel; });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../../../capivarajs/node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 
@@ -20684,8 +20858,10 @@ var CPModel = /** @class */ (function () {
     };
     CPModel.prototype.init = function () {
         this.map.addCpModels(this);
-        this.element.removeEventListener('input', this.applyValueInModel);
-        this.element.addEventListener('input', this.applyValueInModel);
+        if (!_common__WEBPACK_IMPORTED_MODULE_1__["Common"].isComponent(this.element)) {
+            this.element.removeEventListener('input', this.applyValueInModel);
+            this.element.addEventListener('input', this.applyValueInModel);
+        }
     };
     CPModel.prototype.applyModelInValue = function () {
         var value = lodash__WEBPACK_IMPORTED_MODULE_0__["get"](_common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(this.element).scope, this.attribute);
@@ -20726,18 +20902,18 @@ var CPModel = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-mouse.ts":
-/*!**************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-mouse.ts ***!
-  \**************************************************************************/
+/***/ "../src/map/directive/cp-mouse.ts":
+/*!****************************************!*\
+  !*** ../src/map/directive/cp-mouse.ts ***!
+  \****************************************/
 /*! exports provided: CPMouse */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPMouse", function() { return CPMouse; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPMouse = /** @class */ (function () {
@@ -20760,11 +20936,11 @@ var CPMouse = /** @class */ (function () {
         this.init();
     };
     CPMouse.prototype.onMouse = function (evt) {
+        var _a;
         var directiveName = 'cp-' + evt.type;
         if (evt.target && evt.target[directiveName]) {
             _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(evt.target[directiveName].element, evt.target[directiveName].element.getAttribute(directiveName), (_a = {}, _a[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].EVENT_ATTRIBUTE_NAME] = evt, _a));
         }
-        var _a;
     };
     CPMouse.prototype.init = function () {
         var _this = this;
@@ -20784,21 +20960,23 @@ var CPMouse = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-repeat.ts":
-/*!***************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-repeat.ts ***!
-  \***************************************************************************/
+/***/ "../src/map/directive/cp-repeat.ts":
+/*!*****************************************!*\
+  !*** ../src/map/directive/cp-repeat.ts ***!
+  \*****************************************/
 /*! exports provided: CPRepeat */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPRepeat", function() { return CPRepeat; });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../../../capivarajs/node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
-/* harmony import */ var _core_controller__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../core/controller */ "../../../capivarajs/src/core/controller.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
+/* harmony import */ var _core_controller__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../core/controller */ "../src/core/controller.ts");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../index */ "../src/index.ts");
+
 
 
 
@@ -20836,7 +21014,9 @@ var CPRepeat = /** @class */ (function () {
     };
     CPRepeat.prototype.removeChildes = function () {
         var _this = this;
-        this.elms.forEach(function (elm) { return _this.referenceNode.parentNode.removeChild(elm); });
+        this.elms.forEach(function (elm) {
+            _this.referenceNode.parentNode.removeChild(elm);
+        });
     };
     CPRepeat.prototype.afterLoop = function () {
         var _this = this;
@@ -20858,12 +21038,20 @@ var CPRepeat = /** @class */ (function () {
             _common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(elm).scope[attributeAlias] = row;
             return elm;
         });
-        this.elms.reverse().forEach(function (elm, index) { return _common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(elm).scope[_constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].REPEAT_INDEX_NAME] = index; });
+        this.elms.reverse().forEach(function (elm, index) {
+            _common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(elm).scope[_constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].REPEAT_INDEX_NAME] = index;
+            _this.createChildrenComponents(elm);
+        });
         var shift = Object.assign([], this.elms)[this.elms.length - 1];
         if (shift) {
             _common__WEBPACK_IMPORTED_MODULE_1__["Common"].appendAfter(shift, this.referenceNode.parentNode.appendChild(document.createComment('end repeat ' + this.attribute)));
         }
         this.afterLoop();
+    };
+    CPRepeat.prototype.createChildrenComponents = function (elm) {
+        (Array.from(elm.children) || []).forEach(function (child) {
+            _index__WEBPACK_IMPORTED_MODULE_4__["default"].constroyIfComponent(child);
+        });
     };
     return CPRepeat;
 }());
@@ -20872,18 +21060,18 @@ var CPRepeat = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-show.ts":
-/*!*************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-show.ts ***!
-  \*************************************************************************/
+/***/ "../src/map/directive/cp-show.ts":
+/*!***************************************!*\
+  !*** ../src/map/directive/cp-show.ts ***!
+  \***************************************/
 /*! exports provided: CPShow */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPShow", function() { return CPShow; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../../../capivarajs/src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPShow = /** @class */ (function () {
@@ -20920,17 +21108,17 @@ var CPShow = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/directive/cp-style.ts":
-/*!**************************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/directive/cp-style.ts ***!
-  \**************************************************************************/
+/***/ "../src/map/directive/cp-style.ts":
+/*!****************************************!*\
+  !*** ../src/map/directive/cp-style.ts ***!
+  \****************************************/
 /*! exports provided: CPStyle */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPStyle", function() { return CPStyle; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../../../capivarajs/src/common.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
 
 var CPStyle = /** @class */ (function () {
     function CPStyle(_element, _map) {
@@ -20982,36 +21170,36 @@ var CPStyle = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/map/map-dom.ts":
-/*!***************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/map/map-dom.ts ***!
-  \***************************************************************/
+/***/ "../src/map/map-dom.ts":
+/*!*****************************!*\
+  !*** ../src/map/map-dom.ts ***!
+  \*****************************/
 /*! exports provided: MapDom */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapDom", function() { return MapDom; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "../../../capivarajs/src/constants.ts");
-/* harmony import */ var _directive_cp_attr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./directive/cp-attr */ "../../../capivarajs/src/map/directive/cp-attr.ts");
-/* harmony import */ var _directive_cp_blur__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./directive/cp-blur */ "../../../capivarajs/src/map/directive/cp-blur.ts");
-/* harmony import */ var _directive_cp_change__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./directive/cp-change */ "../../../capivarajs/src/map/directive/cp-change.ts");
-/* harmony import */ var _directive_cp_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./directive/cp-class */ "../../../capivarajs/src/map/directive/cp-class.ts");
-/* harmony import */ var _directive_cp_click__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./directive/cp-click */ "../../../capivarajs/src/map/directive/cp-click.ts");
-/* harmony import */ var _directive_cp_disabled__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./directive/cp-disabled */ "../../../capivarajs/src/map/directive/cp-disabled.ts");
-/* harmony import */ var _directive_cp_else__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./directive/cp-else */ "../../../capivarajs/src/map/directive/cp-else.ts");
-/* harmony import */ var _directive_cp_else_if__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./directive/cp-else-if */ "../../../capivarajs/src/map/directive/cp-else-if.ts");
-/* harmony import */ var _directive_cp_focus__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./directive/cp-focus */ "../../../capivarajs/src/map/directive/cp-focus.ts");
-/* harmony import */ var _directive_cp_hide__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./directive/cp-hide */ "../../../capivarajs/src/map/directive/cp-hide.ts");
-/* harmony import */ var _directive_cp_if__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./directive/cp-if */ "../../../capivarajs/src/map/directive/cp-if.ts");
-/* harmony import */ var _directive_cp_init__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./directive/cp-init */ "../../../capivarajs/src/map/directive/cp-init.ts");
-/* harmony import */ var _directive_cp_key__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./directive/cp-key */ "../../../capivarajs/src/map/directive/cp-key.ts");
-/* harmony import */ var _directive_cp_model__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./directive/cp-model */ "../../../capivarajs/src/map/directive/cp-model.ts");
-/* harmony import */ var _directive_cp_mouse__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./directive/cp-mouse */ "../../../capivarajs/src/map/directive/cp-mouse.ts");
-/* harmony import */ var _directive_cp_repeat__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./directive/cp-repeat */ "../../../capivarajs/src/map/directive/cp-repeat.ts");
-/* harmony import */ var _directive_cp_show__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./directive/cp-show */ "../../../capivarajs/src/map/directive/cp-show.ts");
-/* harmony import */ var _directive_cp_style__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./directive/cp-style */ "../../../capivarajs/src/map/directive/cp-style.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "../src/constants.ts");
+/* harmony import */ var _directive_cp_attr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./directive/cp-attr */ "../src/map/directive/cp-attr.ts");
+/* harmony import */ var _directive_cp_blur__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./directive/cp-blur */ "../src/map/directive/cp-blur.ts");
+/* harmony import */ var _directive_cp_change__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./directive/cp-change */ "../src/map/directive/cp-change.ts");
+/* harmony import */ var _directive_cp_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./directive/cp-class */ "../src/map/directive/cp-class.ts");
+/* harmony import */ var _directive_cp_click__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./directive/cp-click */ "../src/map/directive/cp-click.ts");
+/* harmony import */ var _directive_cp_disabled__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./directive/cp-disabled */ "../src/map/directive/cp-disabled.ts");
+/* harmony import */ var _directive_cp_else__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./directive/cp-else */ "../src/map/directive/cp-else.ts");
+/* harmony import */ var _directive_cp_else_if__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./directive/cp-else-if */ "../src/map/directive/cp-else-if.ts");
+/* harmony import */ var _directive_cp_focus__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./directive/cp-focus */ "../src/map/directive/cp-focus.ts");
+/* harmony import */ var _directive_cp_hide__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./directive/cp-hide */ "../src/map/directive/cp-hide.ts");
+/* harmony import */ var _directive_cp_if__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./directive/cp-if */ "../src/map/directive/cp-if.ts");
+/* harmony import */ var _directive_cp_init__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./directive/cp-init */ "../src/map/directive/cp-init.ts");
+/* harmony import */ var _directive_cp_key__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./directive/cp-key */ "../src/map/directive/cp-key.ts");
+/* harmony import */ var _directive_cp_model__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./directive/cp-model */ "../src/map/directive/cp-model.ts");
+/* harmony import */ var _directive_cp_mouse__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./directive/cp-mouse */ "../src/map/directive/cp-mouse.ts");
+/* harmony import */ var _directive_cp_repeat__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./directive/cp-repeat */ "../src/map/directive/cp-repeat.ts");
+/* harmony import */ var _directive_cp_show__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./directive/cp-show */ "../src/map/directive/cp-show.ts");
+/* harmony import */ var _directive_cp_style__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./directive/cp-style */ "../src/map/directive/cp-style.ts");
 
 
 
@@ -21173,12 +21361,17 @@ var MapDom = /** @class */ (function () {
     MapDom.prototype.reloadElementChildes = function (element, initialScope) {
         var _this = this;
         if (element.children) {
-            Array.from(element.children).forEach(function (child) {
+            var children = Array.from(element.children), scopesToUpdate_1 = [];
+            children.forEach(function (child) {
                 var childScope = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(child);
                 if (childScope && childScope.mapDom && childScope.id !== initialScope.id) {
-                    childScope.mapDom.reloadDirectives();
+                    scopesToUpdate_1.push(childScope);
                 }
                 _this.reloadElementChildes(child, initialScope);
+            });
+            Array.from(new Set(scopesToUpdate_1)).forEach(function (scope) {
+                scope.mapDom.reloadDirectives();
+                // console.log('atualizou o scope ' + scope.id + ' :: ' + new Date().getTime());
             });
         }
     };
@@ -21225,9 +21418,6 @@ var MapDom = /** @class */ (function () {
         if (!this.renderedView) {
             return;
         }
-        if (this.timeLastReload) {
-            clearTimeout(this.timeLastReload);
-        }
         this.reloadDirectives();
         this.processInterpolation(this.element);
         this.reloadElementChildes(this.element, _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(this.element));
@@ -21254,12 +21444,7 @@ var MapDom = /** @class */ (function () {
      */
     MapDom.prototype.processInterpolation = function (element) {
         var _this = this;
-        if (element.timeLastReload) {
-            clearTimeout(element.timeLastReload);
-        }
-        element.timeLastReload = setTimeout(function () {
-            _this.deepText(element).forEach(function (childNode) { return _this.interpolation(childNode); });
-        }, 1);
+        this.deepText(element).forEach(function (childNode) { return _this.interpolation(childNode); });
     };
     MapDom.prototype.getInterpolationValue = function (content, childNode, prefix) {
         if (prefix) {
@@ -21470,18 +21655,18 @@ var MapDom = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/scope/scope.proxy.ts":
-/*!*********************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/scope/scope.proxy.ts ***!
-  \*********************************************************************/
+/***/ "../src/scope/scope.proxy.ts":
+/*!***********************************!*\
+  !*** ../src/scope/scope.proxy.ts ***!
+  \***********************************/
 /*! exports provided: ScopeProxy */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScopeProxy", function() { return ScopeProxy; });
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "../../../capivarajs/src/constants.ts");
-/* harmony import */ var _core_observer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/observer */ "../../../capivarajs/src/core/observer/index.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "../src/constants.ts");
+/* harmony import */ var _core_observer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/observer */ "../src/core/observer/index.ts");
 
 
 var ScopeProxy = /** @class */ (function () {
@@ -21504,8 +21689,10 @@ var ScopeProxy = /** @class */ (function () {
         }
     };
     ScopeProxy.prototype.updateScopes = function (scope) {
-        scope.mapDom.reload();
-        if (scope.$parent) {
+        if (!scope.$parent) {
+            scope.mapDom.reload();
+        }
+        else {
             this.updateScopes(scope.$parent);
         }
     };
@@ -21521,22 +21708,22 @@ var ScopeProxy = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../capivarajs/src/scope/scope.ts":
-/*!***************************************************************!*\
-  !*** /media/mateus/hd/capivara/capivarajs/src/scope/scope.ts ***!
-  \***************************************************************/
+/***/ "../src/scope/scope.ts":
+/*!*****************************!*\
+  !*** ../src/scope/scope.ts ***!
+  \*****************************/
 /*! exports provided: Scope */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Scope", function() { return Scope; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common */ "../../../capivarajs/src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "../../../capivarajs/src/constants.ts");
-/* harmony import */ var _core_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/element */ "../../../capivarajs/src/core/element.ts");
-/* harmony import */ var _core_eval__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/eval */ "../../../capivarajs/src/core/eval.ts");
-/* harmony import */ var _map_map_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../map/map-dom */ "../../../capivarajs/src/map/map-dom.ts");
-/* harmony import */ var _scope_proxy__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scope.proxy */ "../../../capivarajs/src/scope/scope.proxy.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "../src/constants.ts");
+/* harmony import */ var _core_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/element */ "../src/core/element.ts");
+/* harmony import */ var _core_eval__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/eval */ "../src/core/eval.ts");
+/* harmony import */ var _map_map_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../map/map-dom */ "../src/map/map-dom.ts");
+/* harmony import */ var _scope_proxy__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scope.proxy */ "../src/scope/scope.proxy.ts");
 
 
 
@@ -21558,8 +21745,8 @@ var Scope = /** @class */ (function () {
             _this.watchers
                 .filter(function (watcher) { return watcher.evtName === evtName; })
                 .forEach(function (watcher) {
-                (_a = watcher.callback).call.apply(_a, [_this].concat(args));
                 var _a;
+                (_a = watcher.callback).call.apply(_a, [_this].concat(args));
             });
         };
         this.$eval = function (source) {
@@ -21623,73 +21810,32 @@ var Scope = /** @class */ (function () {
             _this.cpElements[key].destroy();
         });
     };
+    Scope.prototype.refresh = function () {
+        this.mapDom.reload();
+    };
     return Scope;
 }());
 
 
 
-/***/ }),
+/***/ })
 
-/***/ "../node_modules/webpack/buildin/global.js":
-/*!*************************************************!*\
-  !*** ../node_modules/webpack/buildin/global.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1, eval)("this");
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
+/******/ });
+//# sourceMappingURL=capivara.js.map
 
 /***/ }),
 
-/***/ "../node_modules/webpack/buildin/module.js":
-/*!*************************************************!*\
-  !*** ../node_modules/webpack/buildin/module.js ***!
-  \*************************************************/
+/***/ "../node_modules/capivarajs/index.js":
+/*!*******************************************!*\
+  !*** ../node_modules/capivarajs/index.js ***!
+  \*******************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = function(module) {
-	if (!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
+__webpack_require__(/*! ./dist/capivara.js */ "../node_modules/capivarajs/dist/capivara.js");
+module.exports = window.capivara;
+
+
 
 
 /***/ }),
@@ -21704,7 +21850,8 @@ module.exports = function(module) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Cookie", function() { return Cookie; });
-/* harmony import */ var capivarajs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! capivarajs */ "../../../capivarajs/src/index.ts");
+/* harmony import */ var capivarajs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! capivarajs */ "../node_modules/capivarajs/index.js");
+/* harmony import */ var capivarajs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(capivarajs__WEBPACK_IMPORTED_MODULE_0__);
 
 var Cookie;
 (function (Cookie) {
@@ -21736,7 +21883,7 @@ var Cookie;
     }
     Cookie.erase = erase;
     function isFavorite(key, value) {
-        return capivarajs__WEBPACK_IMPORTED_MODULE_0__["default"].equals(get(key), value);
+        return capivarajs__WEBPACK_IMPORTED_MODULE_0___default.a.equals(get(key), value);
     }
     Cookie.isFavorite = isFavorite;
 })(Cookie || (Cookie = {}));
@@ -21792,7 +21939,8 @@ var Coordinates;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FocusElement", function() { return FocusElement; });
-/* harmony import */ var capivarajs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! capivarajs */ "../../../capivarajs/src/index.ts");
+/* harmony import */ var capivarajs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! capivarajs */ "../node_modules/capivarajs/index.js");
+/* harmony import */ var capivarajs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(capivarajs__WEBPACK_IMPORTED_MODULE_0__);
 
 var FocusElement;
 (function (FocusElement) {
@@ -21837,7 +21985,7 @@ var FocusElement;
         if (liFocused) {
             var container_1 = liFocused.parentNode;
             Array.from(container_1.children).forEach(function (childNode, i) {
-                if (capivarajs__WEBPACK_IMPORTED_MODULE_0__["default"].equals(childNode, liFocused)) {
+                if (capivarajs__WEBPACK_IMPORTED_MODULE_0___default.a.equals(childNode, liFocused)) {
                     container_1.scrollTop = (i * (container_1.clientHeight / container_1.children.length));
                 }
             });
@@ -21910,7 +22058,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var capivarajs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! capivarajs */ "../../../capivarajs/src/index.ts");
+/* harmony import */ var capivarajs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! capivarajs */ "../node_modules/capivarajs/index.js");
+/* harmony import */ var capivarajs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(capivarajs__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _select_select_template_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./select/select.template.html */ "../src/select/select.template.html");
 /* harmony import */ var _select_select_template_html__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_select_select_template_html__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _select_select_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./select/select.style.scss */ "../src/select/select.style.scss");
@@ -21928,7 +22077,7 @@ var Component = {
     bindings: ['cpModel', 'items'],
     controller: _select_select_component__WEBPACK_IMPORTED_MODULE_3__["SelectController"]
 };
-/* harmony default export */ __webpack_exports__["default"] = (capivarajs__WEBPACK_IMPORTED_MODULE_0__["default"].component('cp-select', Component));
+/* harmony default export */ __webpack_exports__["default"] = (capivarajs__WEBPACK_IMPORTED_MODULE_0___default.a.component('cp-select', Component));
 
 
 /***/ }),
@@ -21943,7 +22092,8 @@ var Component = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectController", function() { return SelectController; });
-/* harmony import */ var capivarajs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! capivarajs */ "../../../capivarajs/src/index.ts");
+/* harmony import */ var capivarajs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! capivarajs */ "../node_modules/capivarajs/index.js");
+/* harmony import */ var capivarajs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(capivarajs__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../helpers */ "../src/helpers/index.ts");
 /* harmony import */ var _helpers_focus_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helpers/focus-element */ "../src/helpers/focus-element.ts");
 /* harmony import */ var _helpers_cookie__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helpers/cookie */ "../src/helpers/cookie.ts");
@@ -21955,6 +22105,10 @@ var SelectController = /** @class */ (function () {
     function SelectController($scope, $element) {
         this.$scope = $scope;
         this.$element = $element;
+        this.inputValue = '';
+        this.loading = false;
+        this.hasFocus = false;
+        this.positionList = {};
     }
     SelectController.prototype.onKeyDown = function (evt) {
         if (evt.keyCode == 13) {
@@ -21978,22 +22132,14 @@ var SelectController = /** @class */ (function () {
         }
     };
     SelectController.prototype.$onInit = function () {
+        var _this = this;
         this.setFavoriteKey();
         this.closeWhenClickAway();
-        // this.$scope.element(window).on('scroll', () => {
-        //     if (this.hasFocus) {
-        //         this.setStyleList();
-        //     }
-        // });
-    };
-    SelectController.prototype.disableScrolling = function () {
-        var x = window.scrollX, y = window.scrollY;
-        window.onscroll = function () { window.scrollTo(x, y); };
-        document.ontouchmove = function (e) { e.preventDefault(); };
-    };
-    SelectController.prototype.enableScrolling = function () {
-        window.onscroll = function () { };
-        document.ontouchmove = function (e) { return true; };
+        this.$scope.element(document).on('scroll', function () {
+            if (_this.hasFocus) {
+                _this.setStyleList();
+            }
+        });
     };
     SelectController.prototype.$onViewInit = function () {
         var _this = this;
@@ -22017,6 +22163,7 @@ var SelectController = /** @class */ (function () {
                 this.$bindings.cpModel = null;
             }
         }
+        this.$scope.$watch('$ctrl.$bindings.cpModel', function (newValue) { return _this.select(newValue, true); });
     };
     SelectController.prototype.closeWhenClickAway = function () {
         var _this = this;
@@ -22037,8 +22184,8 @@ var SelectController = /** @class */ (function () {
             }
         });
     };
-    SelectController.prototype.select = function ($value) {
-        if ($value && !capivarajs__WEBPACK_IMPORTED_MODULE_0__["default"].equals($value, this.$bindings.cpModel)) {
+    SelectController.prototype.select = function ($value, forceUpdate) {
+        if (($value && !capivarajs__WEBPACK_IMPORTED_MODULE_0___default.a.equals($value, this.$bindings.cpModel)) || ($value && forceUpdate)) {
             this.inputValue = this.$constants.field ? $value[this.$constants.field] : $value;
             this.$bindings.cpModel = $value;
             this.close();
@@ -22048,16 +22195,14 @@ var SelectController = /** @class */ (function () {
         }
     };
     SelectController.prototype.hasItemSelected = function () {
-        return capivarajs__WEBPACK_IMPORTED_MODULE_0__["default"].isObject(this.$bindings.cpModel);
+        return capivarajs__WEBPACK_IMPORTED_MODULE_0___default.a.isObject(this.$bindings.cpModel);
     };
     SelectController.prototype.open = function () {
         this.setStyleList();
         this.containerElement.querySelector('ul').style.display = 'block';
-        this.disableScrolling();
     };
     SelectController.prototype.close = function () {
         this.containerElement.querySelector('ul').style.display = 'none';
-        this.enableScrolling();
     };
     SelectController.prototype.clear = function () {
         if (this.$bindings.cpModel) {
@@ -22148,14 +22293,7 @@ var SelectController = /** @class */ (function () {
             'top': position.top + this.containerElement.clientHeight + 'px',
         };
         this.positionList = obj;
-    };
-    SelectController.prototype.$onChanges = function (changes) {
-        var _this = this;
-        changes.forEach(function (change) {
-            if (change.name == 'cpModel') {
-                _this.select(change.object[change.name]);
-            }
-        });
+        this.$scope.refresh();
     };
     SelectController.prototype.getText = function ($value) {
         return this.$constants.field ? $value[this.$constants.field] : $value;
@@ -22188,6 +22326,14 @@ var SelectController = /** @class */ (function () {
     SelectController.prototype.isFavorite = function ($value) {
         return _helpers_cookie__WEBPACK_IMPORTED_MODULE_3__["Cookie"].isFavorite(this.FAVORITE_KEY, $value);
     };
+    SelectController.prototype.$onChanges = function () {
+        var _this = this;
+        setTimeout(function () {
+            if (_this.$bindings.cpModel) {
+                _this.inputValue = _this.$constants.field ? _this.$bindings.cpModel[_this.$constants.field] : _this.$bindings.cpModel;
+            }
+        });
+    };
     return SelectController;
 }());
 
@@ -22213,7 +22359,7 @@ var SelectController = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"cp-select-container\">\n    <input type=\"text\"\n           cp-model=\"$ctrl.inputValue\"\n           cp-focus=\"$ctrl.onFocusInput()\"\n           cp-blur=\"$ctrl.onBlurInput()\"\n           cp-keydown=\"$ctrl.onKeyDown($event)\"\n           cp-attr.reflect-value=\"$ctrl.inputValue\"\n           cp-class=\"{ 'focused' : $ctrl.hasFocus }\"\n           cp-keyup=\"$ctrl.onKeyUp($event)\" />\n    <label class=\"form-label cp-address-label\"\n           cp-if=\"$ctrl.$constants.placeholder\"\n           cp-class=\"{ 'active' : $ctrl.address.information }\">\n        [[ $ctrl.$constants.placeholder ]]\n    </label>\n    <div class=\"cp-select-btns\"\n         cp-click=\"$ctrl.clear()\">\n        <div class=\"close\"\n             cp-show=\"$ctrl.hasItemSelected() && !$ctrl.loading\"></div>\n        <div class=\"arrow-down\"\n             cp-hide=\"$ctrl.hasItemSelected() || $ctrl.loading\"></div>\n        <div class=\"cp-select-loading\"\n             cp-show=\"$ctrl.loading\"></div>\n    </div>\n    <ul cp-style=\"$ctrl.positionList\">\n        <li cp-repeat=\"$value in $ctrl.data\"\n            cp-click=\"$ctrl.select($value)\">\n            <div class=\"cp-option-content\">\n                <cp-transclude></cp-transclude>\n                <span cp-if=\"$ctrl.hasTransclude()\"> [[ $ctrl.getText($value) ]] </span>\n            </div>\n            <div class=\"cp-favorite-content\"\n                 cp-if=\"$ctrl.$constants.favorite\">\n                <svg cp-click=\"$ctrl.favorite($event, $value)\"\n                     cp-show=\"!$ctrl.isFavorite($value)\"\n                     version=\"1.1\"\n                     xmlns=\"http://www.w3.org/2000/svg\"\n                     xmlns:xlink=\"http://www.w3.org/1999/xlink\"\n                     x=\"0px\"\n                     y=\"0px\"\n                     viewBox=\"0 0 487.222 487.222\"\n                     xml:space=\"preserve\">\n                    <g>\n                        <path d=\"M486.554,186.811c-1.6-4.9-5.8-8.4-10.9-9.2l-152-21.6l-68.4-137.5c-2.3-4.6-7-7.5-12.1-7.5l0,0c-5.1,0-9.8,2.9-12.1,7.6\n                       l-67.5,137.9l-152,22.6c-5.1,0.8-9.3,4.3-10.9,9.2s-0.2,10.3,3.5,13.8l110.3,106.9l-25.5,151.4c-0.9,5.1,1.2,10.2,5.4,13.2\n                       c2.3,1.7,5.1,2.6,7.9,2.6c2.2,0,4.3-0.5,6.3-1.6l135.7-71.9l136.1,71.1c2,1,4.1,1.5,6.2,1.5l0,0c7.4,0,13.5-6.1,13.5-13.5\n                       c0-1.1-0.1-2.1-0.4-3.1l-26.3-150.5l109.6-107.5C486.854,197.111,488.154,191.711,486.554,186.811z M349.554,293.911\n                       c-3.2,3.1-4.6,7.6-3.8,12l22.9,131.3l-118.2-61.7c-3.9-2.1-8.6-2-12.6,0l-117.8,62.4l22.1-131.5c0.7-4.4-0.7-8.8-3.9-11.9\n                       l-95.6-92.8l131.9-19.6c4.4-0.7,8.2-3.4,10.1-7.4l58.6-119.7l59.4,119.4c2,4,5.8,6.7,10.2,7.4l132,18.8L349.554,293.911z\"\n                        />\n                    </g>\n                </svg>\n                <svg version=\"1.1\"\n                     cp-click=\"$ctrl.favorite($event, $value)\"\n                     cp-show=\"$ctrl.isFavorite($value)\"\n                     id=\"Layer_1\"\n                     xmlns=\"http://www.w3.org/2000/svg\"\n                     xmlns:xlink=\"http://www.w3.org/1999/xlink\"\n                     x=\"0px\"\n                     y=\"0px\"\n                     viewBox=\"0 0 426.667 426.667\"\n                     style=\"enable-background:new 0 0 426.667 426.667;\"\n                     xml:space=\"preserve\">\n                    <polygon style=\"fill:#FAC917;\"\n                             points=\"213.333,10.441 279.249,144.017 426.667,165.436 320,269.41 345.173,416.226 213.333,346.91 \n\t81.485,416.226 106.667,269.41 0,165.436 147.409,144.017 \" />\n                </svg>\n            </div>\n        </li>\n    </ul>\n</div>";
+module.exports = "<div class=\"cp-select-container\">\n    <input type=\"text\"\n           cp-model=\"$ctrl.inputValue\"\n           cp-focus=\"$ctrl.onFocusInput()\"\n           cp-blur=\"$ctrl.onBlurInput()\"\n           cp-keydown=\"$ctrl.onKeyDown($event)\"\n           cp-attr.reflect-value=\"$ctrl.inputValue\"\n           cp-class=\"{ 'focused' : $ctrl.hasFocus }\"\n           cp-keyup=\"$ctrl.onKeyUp($event)\" />\n    <label class=\"form-label cp-address-label\"\n           cp-show=\"$ctrl.$constants.placeholder\"\n           cp-class=\"{ 'active' : $ctrl.address.information }\">\n        [[ $ctrl.$constants.placeholder ]]\n    </label>\n    <div class=\"cp-select-btns\"\n         cp-click=\"$ctrl.clear()\">\n        <div class=\"close\"\n             cp-show=\"$ctrl.hasItemSelected() && !$ctrl.loading\"></div>\n        <div class=\"arrow-down\"\n             cp-hide=\"$ctrl.hasItemSelected() || $ctrl.loading\"></div>\n        <div class=\"cp-select-loading\"\n             cp-show=\"$ctrl.loading\"></div>\n    </div>\n    <ul cp-style=\"$ctrl.positionList\">\n        <li cp-repeat=\"$value in $ctrl.data\"\n            cp-click=\"$ctrl.select($value)\">\n            <div class=\"cp-option-content\">\n                <cp-transclude></cp-transclude>\n                <span cp-show=\"$ctrl.hasTransclude()\"> [[ $ctrl.getText($value) ]] </span>\n            </div>\n            <div class=\"cp-favorite-content\"\n                 cp-show=\"$ctrl.$constants.favorite\">\n                <svg cp-click=\"$ctrl.favorite($event, $value)\"\n                     cp-show=\"!$ctrl.isFavorite($value)\"\n                     version=\"1.1\"\n                     xmlns=\"http://www.w3.org/2000/svg\"\n                     xmlns:xlink=\"http://www.w3.org/1999/xlink\"\n                     x=\"0px\"\n                     y=\"0px\"\n                     viewBox=\"0 0 487.222 487.222\"\n                     xml:space=\"preserve\">\n                    <g>\n                        <path d=\"M486.554,186.811c-1.6-4.9-5.8-8.4-10.9-9.2l-152-21.6l-68.4-137.5c-2.3-4.6-7-7.5-12.1-7.5l0,0c-5.1,0-9.8,2.9-12.1,7.6\n                       l-67.5,137.9l-152,22.6c-5.1,0.8-9.3,4.3-10.9,9.2s-0.2,10.3,3.5,13.8l110.3,106.9l-25.5,151.4c-0.9,5.1,1.2,10.2,5.4,13.2\n                       c2.3,1.7,5.1,2.6,7.9,2.6c2.2,0,4.3-0.5,6.3-1.6l135.7-71.9l136.1,71.1c2,1,4.1,1.5,6.2,1.5l0,0c7.4,0,13.5-6.1,13.5-13.5\n                       c0-1.1-0.1-2.1-0.4-3.1l-26.3-150.5l109.6-107.5C486.854,197.111,488.154,191.711,486.554,186.811z M349.554,293.911\n                       c-3.2,3.1-4.6,7.6-3.8,12l22.9,131.3l-118.2-61.7c-3.9-2.1-8.6-2-12.6,0l-117.8,62.4l22.1-131.5c0.7-4.4-0.7-8.8-3.9-11.9\n                       l-95.6-92.8l131.9-19.6c4.4-0.7,8.2-3.4,10.1-7.4l58.6-119.7l59.4,119.4c2,4,5.8,6.7,10.2,7.4l132,18.8L349.554,293.911z\"\n                        />\n                    </g>\n                </svg>\n                <svg version=\"1.1\"\n                     cp-click=\"$ctrl.favorite($event, $value)\"\n                     cp-show=\"$ctrl.isFavorite($value)\"\n                     id=\"Layer_1\"\n                     xmlns=\"http://www.w3.org/2000/svg\"\n                     xmlns:xlink=\"http://www.w3.org/1999/xlink\"\n                     x=\"0px\"\n                     y=\"0px\"\n                     viewBox=\"0 0 426.667 426.667\"\n                     style=\"enable-background:new 0 0 426.667 426.667;\"\n                     xml:space=\"preserve\">\n                    <polygon style=\"fill:#FAC917;\"\n                             points=\"213.333,10.441 279.249,144.017 426.667,165.436 320,269.41 345.173,416.226 213.333,346.91\n\t81.485,416.226 106.667,269.41 0,165.436 147.409,144.017 \" />\n                </svg>\n            </div>\n        </li>\n    </ul>\n</div>\n";
 
 /***/ })
 
