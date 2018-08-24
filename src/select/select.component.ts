@@ -1,25 +1,36 @@
-import capivara from 'capivarajs';
+import { Capivara, Component, Controller } from 'capivarajs';
+
+import template from './select.template.html';
+import style from './select.style.scss';
 import { Coordinates } from '../helpers';
 import { FocusElement } from '../helpers/focus-element';
 import { Cookie } from '../helpers/cookie';
 
-export class SelectController {
-  public $constants;
-  public $functions;
-  public $bindings;
+@Component({
+  tag: 'cp-select',
+  template,
+  style,
+  constants: ['debounce', 'field', 'placeholder', 'favorite'],
+  functions: ['onSelect', 'onRemove'],
+  bindings: ['cpModel', 'items'],
+})
+export class SelectController extends Controller {
 
   private containerElement;
   private inputValue = '';
-  private loading = false;
-  private hasFocus = false;
-  private positionList = {};
-
-  private data;
+  private loading: boolean;
+  private hasFocus: boolean;
+  private positionList: any;
+  private data: any;
   private timeLastSearch;
   private timeCloseList;
   private FAVORITE_KEY;
 
-  constructor(private $scope, private $element) {
+  constructor(public $scope, public $element) {
+    super($scope, $element);
+    this.loading = false;
+    this.hasFocus = false;
+    this.positionList = {};
   }
 
   onKeyDown(evt) {
@@ -74,7 +85,7 @@ export class SelectController {
         this.$bindings.cpModel = null;
       }
     }
-    this.$scope.$watch('$ctrl.$bindings.cpModel', (newValue) => this.select(newValue, true));
+    // this.$scope.$watch('$ctrl.$bindings.cpModel', (newValue) => this.selefct(newValue, true));
   }
 
   closeWhenClickAway() {
@@ -95,7 +106,7 @@ export class SelectController {
   }
 
   select($value, forceUpdate?) {
-    if (($value && !capivara.equals($value, this.$bindings.cpModel)) || ($value && forceUpdate)) {
+    if (($value && !Capivara.equals($value, this.$bindings.cpModel)) || ($value && forceUpdate)) {
       this.inputValue = this.$constants.field ? $value[this.$constants.field] : $value;
       this.$bindings.cpModel = $value;
       this.close();
@@ -105,7 +116,7 @@ export class SelectController {
   }
 
   hasItemSelected() {
-    return capivara.isObject(this.$bindings.cpModel);
+    return Capivara.isObject(this.$bindings.cpModel);
   }
 
   open() {
@@ -240,7 +251,7 @@ export class SelectController {
   $onChanges() {
     setTimeout(() => {
       if (this.$bindings.cpModel) {
-        this.inputValue = this.$constants.field ? this.$bindings.cpModel[this.$constants.field] : this.$bindings.cpModel;
+        // this.inputValue = this.$constants.field ? this.$bindings.cpModel[this.$constants.field] : this.$bindings.cpModel;
       }
     });
   }

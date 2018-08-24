@@ -23,9 +23,7 @@
   "include": [
     "src/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ],
+  "exclude": [],
   "globals": {
     "require": true,
     "capivara": true

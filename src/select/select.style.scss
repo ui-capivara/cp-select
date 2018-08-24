@@ -14,7 +14,7 @@ cp-select{
     {
         width: 5px;
     }
-    
+
     ::-webkit-scrollbar-thumb
     {
         border-radius: 10px;
@@ -134,7 +134,7 @@ cp-select{
         .close:after {
             transform: rotate(-45deg);
         }
-    }    
+    }
     .cp-select-loading {
         display: inline-block;
         width: 14px;
@@ -145,7 +145,7 @@ cp-select{
             -webkit-animation: load-animate infinite linear 1s;
                     animation: load-animate infinite linear 1s;
     }
-    
+
     @-webkit-keyframes load-animate {
         0% {
           -webkit-transform: rotate(0deg);

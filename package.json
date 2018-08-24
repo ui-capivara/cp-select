@@ -16,12 +16,11 @@
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.42",
     "@babel/preset-env": "^7.0.0-beta.42",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "@types/jasmine": "^2.6.3",
     "@types/node": "^9.4.6",
     "babel-loader": "^7.1.4",
     "css-loader": "^0.28.2",
-    "style-loader": "^0.20.3",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "jasmine": "^3.1.0",
@@ -33,7 +32,7 @@
     "karma-typescript": "^3.0.8",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.7",
-    "script-loader": "^0.7.2",
+    "style-loader": "^0.20.3",
     "ts-loader": "^4.1.0",
     "typescript": "^2.7.2",
     "uglifyjs-webpack-plugin": "^1.2.3",
@@ -51,6 +50,6 @@
   "author": "CapivaraJS Team",
   "license": "LGPL-3.0",
   "dependencies": {
-    "capivarajs": "^3.7.0-rc"
+    "capivarajs": "^3.9.1"
   }
 }
