@@ -2,6 +2,7 @@
   "name": "@uicapivara/cp-select",
   "version": "1.2.0",
   "description": "cp-select",
+  "readme": "docs/README.md",
   "private": false,
   "main": "src/index.ts",
   "scripts": {
