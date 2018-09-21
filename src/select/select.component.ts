@@ -66,7 +66,7 @@ export class SelectController extends Controller {
   }
 
   $onViewInit() {
-    this.containerElement = this.$element.querySelector('.cp-select-container');
+    this.containerElement = this.$element.getElementsByClassName('cp-select-container')[0];
     if (this.$constants.debounce === undefined) {
       this.$constants.debounce = 500;
     }
@@ -85,7 +85,6 @@ export class SelectController extends Controller {
         this.$bindings.cpModel = null;
       }
     }
-    // this.$scope.$watch('$ctrl.$bindings.cpModel', (newValue) => this.selefct(newValue, true));
   }
 
   closeWhenClickAway() {
@@ -110,7 +109,7 @@ export class SelectController extends Controller {
       this.inputValue = this.$constants.field ? $value[this.$constants.field] : $value;
       this.$bindings.cpModel = $value;
       this.close();
-      this.$element.querySelector('.cp-select-container input').focus();
+      this.$element.getElementsByClassName('cp-select-container')[0].focus();
       if (this.$functions.onSelect) this.$functions.onSelect($value);
     }
   }
@@ -121,11 +120,11 @@ export class SelectController extends Controller {
 
   open() {
     this.setStyleList();
-    this.containerElement.querySelector('ul').style.display = 'block';
+    this.containerElement.getElementsByTagName('ul')[0].style.display = 'block';
   }
 
   close() {
-    this.containerElement.querySelector('ul').style.display = 'none';
+    this.containerElement.getElementsByTagName('ul')[0].style.display = 'none';
   }
 
   clear() {
@@ -137,7 +136,7 @@ export class SelectController extends Controller {
     this.inputValue = '';
     this.$bindings.cpModel = null;
     if (this.timeCloseList) { clearTimeout(this.timeCloseList) }
-    this.containerElement.querySelector('input').focus();
+    this.containerElement.getElementsByTagName('input')[0].focus();
   }
 
   onFocusInput() {
@@ -218,7 +217,7 @@ export class SelectController extends Controller {
   }
 
   hasTransclude() {
-    return this.$element.querySelector('cp-transclude');
+    return this.$element.getElementsByTagName('cp-transclude')[0];
   }
 
   setFavoriteKey() {
@@ -241,7 +240,7 @@ export class SelectController extends Controller {
       Cookie.set(this.FAVORITE_KEY, $value);
     }
     this.hasFocus = true;
-    this.containerElement.querySelector('input').focus();
+    this.containerElement.getElementsByTagName('input')[0].focus();
   }
 
   isFavorite($value) {
@@ -255,5 +254,4 @@ export class SelectController extends Controller {
       }
     });
   }
-
 }
