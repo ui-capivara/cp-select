@@ -85,7 +85,6 @@ export class SelectController extends Controller {
         this.$bindings.cpModel = null;
       }
     }
-    // this.$scope.$watch('$ctrl.$bindings.cpModel', (newValue) => this.selefct(newValue, true));
   }
 
   closeWhenClickAway() {
